@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document version="1.0">
+    <GraphTransformationSystem ID="I1" directed="true" name="Bark" parallel="true">
+        <TaggedValue Tag="AttrHandler" TagValue="Java Expr">
+            <TaggedValue Tag="Package" TagValue="java.lang"/>
+            <TaggedValue Tag="Package" TagValue="java.util"/>
+        </TaggedValue>
+        <TaggedValue Tag="CSP" TagValue="true"/>
+        <TaggedValue Tag="injective" TagValue="true"/>
+        <TaggedValue Tag="dangling" TagValue="true"/>
+        <TaggedValue Tag="identification" TagValue="true"/>
+        <TaggedValue Tag="NACs" TagValue="true"/>
+        <TaggedValue Tag="PACs" TagValue="true"/>
+        <TaggedValue Tag="GACs" TagValue="true"/>
+        <TaggedValue Tag="layered" TagValue="true"/>
+        <TaggedValue Tag="breakAllLayer" TagValue="true"/>
+        <TaggedValue Tag="showGraphAfterStep" TagValue="true"/>
+        <TaggedValue Tag="TypeGraphLevel" TagValue="ENABLED_MAX_MIN"/>
+        <Types>
+            <NodeType ID="I2" abstract="true" name="piece%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
+                <AttrType ID="I4" attrname="color" typename="boolean" visible="true"/>
+            </NodeType>
+            <NodeType ID="I5" abstract="false" name="P%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:FILLED:[NODE]:">
+                <Parent pID="I2"/>
+            </NodeType>
+            <NodeType ID="I7" abstract="false" name="N%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:FILLED:[NODE]:">
+                <Parent pID="I2"/>
+            </NodeType>
+            <NodeType ID="I9" abstract="false" name="B%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:FILLED:[NODE]:">
+                <Parent pID="I2"/>
+            </NodeType>
+            <NodeType ID="I11" abstract="false" name="R%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:FILLED:[NODE]:">
+                <Parent pID="I2"/>
+            </NodeType>
+            <NodeType ID="I13" abstract="false" name="Q%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:FILLED:[NODE]:">
+                <Parent pID="I2"/>
+            </NodeType>
+            <NodeType ID="I15" abstract="false" name="K%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:FILLED:[NODE]:">
+                <Parent pID="I2"/>
+            </NodeType>
+            <NodeType ID="I17" abstract="false" name="square%:RECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
+                <AttrType ID="I19" attrname="file" typename="byte" visible="true"/>
+                <AttrType ID="I20" attrname="rank" typename="byte" visible="true"/>
+            </NodeType>
+            <EdgeType ID="I21" abstract="false" name="at%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I22" abstract="false" name="adj%:DOT_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <NodeType ID="I23" abstract="false" name="boardCreate%:RECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
+                <AttrType ID="I25" attrname="n" typename="byte" visible="true"/>
+            </NodeType>
+            <Graph ID="I26" kind="TG" name="TypeGraph">
+                <Node ID="I27" type="I2">
+                    <NodeLayout X="689" Y="85"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I29" type="I5">
+                    <NodeLayout X="490" Y="217"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I31" type="I7">
+                    <NodeLayout X="564" Y="216"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I33" type="I9">
+                    <NodeLayout X="608" Y="222"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I35" type="I11">
+                    <NodeLayout X="666" Y="225"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I37" type="I13">
+                    <NodeLayout X="732" Y="229"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I39" type="I15">
+                    <NodeLayout X="800" Y="232"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I41" type="I17">
+                    <NodeLayout X="958" Y="145"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I43" type="I23">
+                    <Attribute constant="true" type="I25">
+                        <Value>
+                            <byte>0</byte>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="1117" Y="59"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Edge ID="I46" source="I27" sourcemax="1" sourcemin="0"
+                    target="I41" targetmax="1" targetmin="1" type="I21">
+                    <EdgeLayout bendX="0" bendY="0"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-20"
+                        targetMultiplicityOffsetY="28" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I47" source="I41" sourcemax="4" sourcemin="0"
+                    target="I41" targetmax="4" targetmin="0" type="I22">
+                    <EdgeLayout bendX="914" bendY="104" loopH="20"
+                        loopW="20" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-27"
+                        targetMultiplicityOffsetY="5" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+        </Types>
+        <Graph ID="I48" kind="HOST" name="Graph">
+            <Node ID="I49" type="I23">
+                <Attribute constant="true" type="I25">
+                    <Value>
+                        <byte>64</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="397" Y="95"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I52" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="315" Y="364"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I56" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="733" Y="471"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I60" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="514" Y="561"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I64" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="135" Y="104"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I68" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="272" Y="156"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I72" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="149" Y="572"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I76" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="585" Y="156"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I80" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="392" Y="633"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I84" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="270" Y="312"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I88" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="946" Y="156"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I92" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="828" Y="156"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I96" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="391" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I100" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="314" Y="600"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I104" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="649" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I108" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="703" Y="156"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I112" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="270" Y="453"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I116" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="90" Y="520"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I120" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="45" Y="217"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I124" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="415" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I128" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="429" Y="112"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I132" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="214" Y="358"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I136" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="912" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I140" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="45" Y="642"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I144" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="135" Y="512"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I148" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="413" Y="208"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I152" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="225" Y="260"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I156" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="881" Y="672"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I160" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="90" Y="208"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I164" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="366" Y="208"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I168" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="180" Y="208"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I172" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="727" Y="104"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I176" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="856" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I180" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="385" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I184" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="135" Y="156"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I188" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="323" Y="104"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I192" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="151" Y="334"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I196" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="352" Y="156"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I200" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="90" Y="468"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I204" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="581" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I208" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="453" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I212" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="90" Y="104"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I216" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="45" Y="156"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I220" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="431" Y="510"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I224" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="158" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I228" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="272" Y="104"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I232" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="45" Y="459"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I236" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="800" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I240" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="385" Y="421"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I244" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="208" Y="156"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I248" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="90" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I252" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="519" Y="314"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I256" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="482" Y="104"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I260" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="557" Y="104"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I264" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="314" Y="212"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I268" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="856" Y="262"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I272" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="45" Y="521"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I276" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>0</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="231" Y="39"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I280" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>1</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="429" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I284" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>2</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="135" Y="265"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I288" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>3</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="503" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I292" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>4</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="307" Y="52"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I296" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>5</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="45" Y="317"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I300" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>6</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="45" Y="104"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+            <Node ID="I304" type="I17">
+                <Attribute constant="true" type="I19">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <Attribute constant="true" type="I20">
+                    <Value>
+                        <byte>7</byte>
+                    </Value>
+                </Attribute>
+                <NodeLayout X="20" Y="20"/>
+                <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+            </Node>
+        </Graph>
+        <Rule ID="I308" formula="true" name="createSquares">
+            <Parameter name="v" type="byte"/>
+            <Graph ID="I310" kind="LHS" name="Left">
+                <Node ID="I311" type="I23">
+                    <Attribute type="I25" variable="true">
+                        <Value>
+                            <string>v</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="75" Y="119"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+            </Graph>
+            <Graph ID="I314" kind="RHS" name="Right">
+                <Node ID="I315" type="I17">
+                    <Attribute type="I19">
+                        <Value>
+                            <string>v%8</string>
+                        </Value>
+                    </Attribute>
+                    <Attribute type="I20">
+                        <Value>
+                            <string>v/8</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="53" Y="136"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I319" type="I23">
+                    <Attribute type="I25">
+                        <Value>
+                            <string>v+1</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="308" Y="101"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+            </Graph>
+            <Morphism name="createSquares">
+                <Mapping image="I319" orig="I311"/>
+            </Morphism>
+            <ApplCondition>
+                <AttrCondition>
+                    <Condition>
+                        <Value>
+                            <string>0&lt;=v&amp;&amp;v&lt;64</string>
+                        </Value>
+                    </Condition>
+                </AttrCondition>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I323" formula="true" name="fileConnect">
+            <Parameter name="f" type="byte"/>
+            <Parameter expr="f+1" name="f1" type="byte"/>
+            <Graph ID="I325" kind="LHS" name="Left">
+                <Node ID="I326" type="I17">
+                    <Attribute type="I19" variable="true">
+                        <Value>
+                            <string>f</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="67" Y="138"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I329" type="I17">
+                    <Attribute type="I19" variable="true">
+                        <Value>
+                            <string>f1</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="181" Y="136"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+            </Graph>
+            <Graph ID="I332" kind="RHS" name="Right">
+                <Node ID="I333" type="I17">
+                    <NodeLayout X="182" Y="136"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I335" type="I17">
+                    <NodeLayout X="67" Y="138"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Edge ID="I337" source="I335" target="I333" type="I22">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I338" source="I333" target="I335" type="I22">
+                    <EdgeLayout bendX="124" bendY="118" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism name="fileConnect">
+                <Mapping image="I333" orig="I329"/>
+                <Mapping image="I335" orig="I326"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I339" kind="NAC" name="notdone">
+                        <Node ID="I340" type="I17">
+                            <NodeLayout X="182" Y="136"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Node ID="I342" type="I17">
+                            <NodeLayout X="64" Y="137"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Edge ID="I344" source="I342" target="I340" type="I22">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                        <Edge ID="I345" source="I340" target="I342" type="I22">
+                            <EdgeLayout bendX="124" bendY="118"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="notdone">
+                        <Mapping image="I340" orig="I329"/>
+                        <Mapping image="I342" orig="I326"/>
+                    </Morphism>
+                </NAC>
+                <AttrCondition>
+                    <Condition>
+                        <Value>
+                            <string>f==f1+1</string>
+                        </Value>
+                    </Condition>
+                </AttrCondition>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+        <Rule ID="I347" formula="true" name="rankConnect">
+            <Parameter name="r" type="byte"/>
+            <Parameter expr="r+1" name="r1" type="byte"/>
+            <Graph ID="I349" kind="LHS" name="Left">
+                <Node ID="I350" type="I17">
+                    <Attribute type="I20" variable="true">
+                        <Value>
+                            <string>r</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="67" Y="138"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I353" type="I17">
+                    <Attribute type="I20" variable="true">
+                        <Value>
+                            <string>r1</string>
+                        </Value>
+                    </Attribute>
+                    <NodeLayout X="182" Y="136"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+            </Graph>
+            <Graph ID="I356" kind="RHS" name="Right">
+                <Node ID="I357" type="I17">
+                    <NodeLayout X="181" Y="136"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I359" type="I17">
+                    <NodeLayout X="67" Y="138"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Edge ID="I361" source="I359" target="I357" type="I22">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I362" source="I357" target="I359" type="I22">
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+            <Morphism name="rankConnect">
+                <Mapping image="I357" orig="I353"/>
+                <Mapping image="I359" orig="I350"/>
+            </Morphism>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I363" kind="NAC" name="notdone">
+                        <Node ID="I364" type="I17">
+                            <NodeLayout X="181" Y="135"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Node ID="I366" type="I17">
+                            <NodeLayout X="66" Y="138"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Edge ID="I368" source="I366" target="I364" type="I22">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                        <Edge ID="I369" source="I364" target="I366" type="I22">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="notdone">
+                        <Mapping image="I364" orig="I353"/>
+                        <Mapping image="I366" orig="I350"/>
+                    </Morphism>
+                </NAC>
+                <AttrCondition>
+                    <Condition>
+                        <Value>
+                            <string>r==r1+1</string>
+                        </Value>
+                    </Condition>
+                </AttrCondition>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="priority" TagValue="0"/>
+        </Rule>
+    </GraphTransformationSystem>
+</Document>
