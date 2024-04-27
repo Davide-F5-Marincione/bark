@@ -91,16 +91,16 @@
             <NodeType ID="I51" abstract="true" name="rook_slide%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
                 <Parent pID="I49"/>
             </NodeType>
-            <NodeType ID="I52" abstract="false" name="ver_slide%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
+            <NodeType ID="I52" abstract="false" name="ver_group%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
                 <Parent pID="I51"/>
             </NodeType>
-            <NodeType ID="I53" abstract="false" name="hor_slide%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
+            <NodeType ID="I53" abstract="false" name="hor_group%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
                 <Parent pID="I51"/>
             </NodeType>
-            <NodeType ID="I54" abstract="false" name="left_slide%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
+            <NodeType ID="I54" abstract="false" name="left_group%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
                 <Parent pID="I50"/>
             </NodeType>
-            <NodeType ID="I55" abstract="false" name="right_slide%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
+            <NodeType ID="I55" abstract="false" name="right_group%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
                 <Parent pID="I50"/>
             </NodeType>
             <EdgeType ID="I56" abstract="false" name="at%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
