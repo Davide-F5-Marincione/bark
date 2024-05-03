@@ -146,7 +146,7 @@
             <EdgeType ID="I78" abstract="false" name="part_of%:DOT_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
             <EdgeType ID="I79" abstract="false" name="mover%:SOLID_LINE:java.awt.Color[r=0,g=204,b=0]:BOLD:[EDGE]:"/>
             <EdgeType ID="I80" abstract="false" name="next_state%:DASH_LINE:java.awt.Color[r=0,g=0,b=0]:BOLD:[EDGE]:"/>
-            <EdgeType ID="I81" abstract="false" name="captured%:SOLID_LINE:java.awt.Color[r=255,g=0,b=0]:BOLD:[EDGE]:"/>
+            <EdgeType ID="I81" abstract="false" name="capturing%:SOLID_LINE:java.awt.Color[r=255,g=0,b=0]:BOLD:[EDGE]:"/>
             <EdgeType ID="I82" abstract="false" name="to%:SOLID_LINE:java.awt.Color[r=255,g=175,b=175]:BOLD:[EDGE]:">
                 <AttrType ID="I84" attrname="is_castling"
                     typename="boolean" visible="true"/>
@@ -455,8 +455,8 @@
                         targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
-                <Edge ID="I187" source="I163" sourcemax="1"
-                    target="I100" targetmax="1" type="I81">
+                <Edge ID="I187" source="I163" target="I100"
+                    targetmax="1" type="I81">
                     <EdgeLayout bendX="40" bendY="322"
                         sourceMultiplicityOffsetX="-5"
                         sourceMultiplicityOffsetY="16"
