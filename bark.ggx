@@ -15,7 +15,7 @@
         <TaggedValue Tag="layered" TagValue="true"/>
         <TaggedValue Tag="breakAllLayer" TagValue="true"/>
         <TaggedValue Tag="showGraphAfterStep" TagValue="true"/>
-        <TaggedValue Tag="TypeGraphLevel" TagValue="DISABLED"/>
+        <TaggedValue Tag="TypeGraphLevel" TagValue="ENABLED_MAX_MIN"/>
         <Types>
             <NodeType ID="I2" abstract="true" name="piece%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
                 <AttrType ID="I4" attrname="color" typename="boolean" visible="true"/>
