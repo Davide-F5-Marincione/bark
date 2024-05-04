@@ -27767,7 +27767,7 @@
                     </Morphism>
                 </NAC>
             </ApplCondition>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I7476" formula="true" name="push_capture">
@@ -27927,7 +27927,7 @@
                     </Morphism>
                 </NAC>
             </ApplCondition>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I7528" formula="true" name="push_en_passant">
@@ -28104,7 +28104,7 @@
                 <Mapping image="I7581" orig="I7555"/>
                 <Mapping image="I7582" orig="I7554"/>
             </Morphism>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I7586" formula="true" name="push_castling">
@@ -28285,7 +28285,7 @@
                 <Mapping image="I7640" orig="I7615"/>
                 <Mapping image="I7641" orig="I7616"/>
             </Morphism>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I7649" formula="true" name="push_promotion">
@@ -28441,7 +28441,7 @@
                     </Morphism>
                 </NAC>
             </ApplCondition>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I7700" formula="true" name="push_promotion_cap">
@@ -28595,7 +28595,7 @@
                 <Mapping image="I7741" orig="I7716"/>
                 <Mapping image="I7751" orig="I7727"/>
             </Morphism>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I7752" formula="true" name="pop_move">
@@ -28760,7 +28760,7 @@
                     </Morphism>
                 </NAC>
             </ApplCondition>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I7805" formula="true" name="pop_capture">
@@ -28925,7 +28925,7 @@
                     </Morphism>
                 </NAC>
             </ApplCondition>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I7859" formula="true" name="pop_en_passant">
@@ -29097,7 +29097,7 @@
                 <Mapping image="I7913" orig="I7890"/>
                 <Mapping image="I7914" orig="I7891"/>
             </Morphism>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I7916" formula="true" name="pop_castling">
@@ -29283,7 +29283,7 @@
                 <Mapping image="I7976" orig="I7950"/>
                 <Mapping image="I7978" orig="I7953"/>
             </Morphism>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I7980" formula="true" name="pop_promotion">
@@ -29439,7 +29439,7 @@
                     </Morphism>
                 </NAC>
             </ApplCondition>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
         <Rule ID="I8031" formula="true" name="pop_promotion_cap">
@@ -29593,7 +29593,7 @@
                 <Mapping image="I8073" orig="I8047"/>
                 <Mapping image="I8081" orig="I8059"/>
             </Morphism>
-            <TaggedValue Tag="layer" TagValue="0"/>
+            <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="0"/>
         </Rule>
     </GraphTransformationSystem>
