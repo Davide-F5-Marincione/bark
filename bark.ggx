@@ -14031,7 +14031,7 @@
                         </NestedAC>
                     </ApplCondition>
                 </NestedAC>
-                <NestedAC>
+                <NestedAC enabled="false">
                     <Graph ID="I3720" kind="AC" name="bishop_likes">
                         <Node ID="I3721" type="I54">
                             <NodeLayout X="168" Y="162"/>
@@ -14371,7 +14371,7 @@
                         </NestedAC>
                     </ApplCondition>
                 </NestedAC>
-                <NestedAC>
+                <NestedAC enabled="false">
                     <Graph ID="I3790" kind="AC" name="rook_likes">
                         <Node ID="I3791" type="I60">
                             <Attribute type="I67" variable="true">
@@ -14658,7 +14658,7 @@
                                     <string>r3</string>
                                     </Value>
                                     </Attribute>
-                                    <NodeLayout X="146" Y="231"/>
+                                    <NodeLayout X="147" Y="231"/>
                                     <additionalLayout
                                     age="0"
                                     force="10"
@@ -15087,7 +15087,7 @@
                         </NestedAC>
                     </ApplCondition>
                 </NestedAC>
-                <NestedAC>
+                <NestedAC enabled="false">
                     <Graph ID="I3950" kind="AC" name="Kcastle">
                         <Node ID="I3951" type="I60">
                             <Attribute constant="true" type="I62">
@@ -15350,7 +15350,7 @@
                         </NestedAC>
                     </ApplCondition>
                 </NestedAC>
-                <NestedAC>
+                <NestedAC enabled="false">
                     <Graph ID="I4013" kind="AC" name="kcastle">
                         <Node ID="I4014" type="I60">
                             <Attribute constant="true" type="I64">
@@ -15613,7 +15613,7 @@
                         </NestedAC>
                     </ApplCondition>
                 </NestedAC>
-                <NestedAC>
+                <NestedAC enabled="false">
                     <Graph ID="I4076" kind="AC" name="Qcastle">
                         <Node ID="I4077" type="I60">
                             <Attribute constant="true" type="I63">
@@ -15925,7 +15925,7 @@
                         </NestedAC>
                     </ApplCondition>
                 </NestedAC>
-                <NestedAC>
+                <NestedAC enabled="false">
                     <Graph ID="I4151" kind="AC" name="qcastle">
                         <Node ID="I4152" type="I60">
                             <Attribute constant="true" type="I65">
