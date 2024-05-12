@@ -24012,5 +24012,121 @@
             <TaggedValue Tag="layer" TagValue="4"/>
             <TaggedValue Tag="priority" TagValue="1"/>
         </Rule>
+        <Rule ID="I6515" formula="true" name="delete_dangling_states">
+            <Graph ID="I6517" kind="LHS" name="Left">
+                <Node ID="I6518" type="I60">
+                    <NodeLayout X="247" Y="207"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+            </Graph>
+            <Graph ID="I6520" kind="RHS" name="Right"/>
+            <Morphism name="delete_dangling_states"/>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I6521" kind="NAC" name="not_dangling">
+                        <Node ID="I6522" type="I60">
+                            <NodeLayout X="247" Y="207"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Node ID="I6524" type="I68">
+                            <NodeLayout X="102" Y="303"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Edge ID="I6525" source="I6524" target="I6522" type="I100">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="not_dangling">
+                        <Mapping image="I6522" orig="I6518"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="4"/>
+            <TaggedValue Tag="priority" TagValue="1"/>
+        </Rule>
+        <Rule ID="I6526" formula="true" name="delete_dangling_pieces">
+            <Graph ID="I6528" kind="LHS" name="Left">
+                <Node ID="I6529" type="I2">
+                    <NodeLayout X="271" Y="114"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+            </Graph>
+            <Graph ID="I6531" kind="RHS" name="Right"/>
+            <Morphism name="delete_dangling_pieces"/>
+            <ApplCondition>
+                <NAC>
+                    <Graph ID="I6532" kind="NAC" name="is_placed">
+                        <Node ID="I6533" type="I2">
+                            <NodeLayout X="271" Y="114"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Node ID="I6535" type="I33">
+                            <NodeLayout X="134" Y="207"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Edge ID="I6537" source="I6533" target="I6535" type="I87">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="is_placed">
+                        <Mapping image="I6533" orig="I6529"/>
+                    </Morphism>
+                </NAC>
+                <NAC>
+                    <Graph ID="I6538" kind="NAC" name="was_captured">
+                        <Node ID="I6539" type="I2">
+                            <NodeLayout X="271" Y="114"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Node ID="I6541" type="I60">
+                            <NodeLayout X="134" Y="229"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Edge ID="I6543" source="I6541" target="I6539" type="I92">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="was_captured">
+                        <Mapping image="I6539" orig="I6529"/>
+                    </Morphism>
+                </NAC>
+                <NAC>
+                    <Graph ID="I6544" kind="NAC" name="moved_once">
+                        <Node ID="I6545" type="I2">
+                            <NodeLayout X="271" Y="114"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Node ID="I6547" type="I60">
+                            <NodeLayout X="156" Y="255"/>
+                            <additionalLayout age="0" force="10"
+                                frozen="false" zone="50"/>
+                        </Node>
+                        <Edge ID="I6549" source="I6545" target="I6547" type="I90">
+                            <EdgeLayout bendX="0" bendY="0"
+                                textOffsetX="0" textOffsetY="-22"/>
+                            <additionalLayout aktlength="200" force="10" preflength="200"/>
+                        </Edge>
+                    </Graph>
+                    <Morphism name="moved_once">
+                        <Mapping image="I6545" orig="I6529"/>
+                    </Morphism>
+                </NAC>
+            </ApplCondition>
+            <TaggedValue Tag="layer" TagValue="4"/>
+            <TaggedValue Tag="priority" TagValue="1"/>
+        </Rule>
     </GraphTransformationSystem>
 </Document>
