@@ -10,6 +10,8 @@
 
 \newcommand{\squarenode}{\noderepr{square}}
 \newcommand{\slidegroupnode}{\noderepr{slide\_group}}
+\newcommand{\bishopgroupnode}{\noderepr{bishop\_like\_group}}
+\newcommand{\rookgroupnode}{\noderepr{rook\_like\_group}}
 
 \newcommand{\adj}{\edgerepr{adj}}
 \newcommand{\partof}{\edgerepr{part\_of}}
@@ -28,7 +30,7 @@
     \section{Representing the board}
     Chess cannot be played without a chessboard, therefore the first step in creating Bark was to define a graph structure that could represent the board.
     \paragraph{How it is done} Fortuitously, a chessboard is composed of 64 squares and, because of that, it can be conveniently be represented as a set of 64-bit integers, where each bit gives the value of a square with respect to specific information of the board. Because of this, a chessboard is usually represented with twelve 64-bit integers, one for each piece type and color. Not only is this representation very compact, but it also allows for very fast operations, as bitwise "magic bitboard" operations are at the core of every modern chess engine.
-    \paragraph{How Bark does it} Bark, however, does not use this representation. Instead, the board is composed of 64 \squarenode\ and 46 \slidegroupnode\  nodes. Each \squarenode\ is connected to its neighbors via a \adj\ and to its \slidegroupnode s via a \partof. However, it is also much slower, as it requires a lot of work to define the rules and the graph structure, and it is much harder to optimize, as it is much harder to optimize a graph structure than a set of bitboards.
+    \paragraph{How Bark does it} Bark, however, does not use this representation. Instead, the board is composed of 64 \squarenode\ and 46 \slidegroupnode\  nodes. Each \squarenode\ is connected to its neighbors via a \adj\ and to its \slidegroupnode s via a \partof. Neighbors are defined only to be those squares with a common edge, and \slidegroupnode s are used to represent the groups of squares reachable in a single move by sliding pieces (bishop, rook or queen). Because of this, \slidegroupnode is actually an abstract class from which \bishopgroupnode\ and \rookgroupnode\ inherit.
 
 \end{document}
 
