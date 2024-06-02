@@ -1,4 +1,4 @@
-\documentclass[a4paper]{scrartcl}
+\documentclass[a4paper, 10pt]{scrartcl}
 
 \usepackage{microtype}
 \usepackage[scale=.8]{geometry}
@@ -13,9 +13,27 @@
 \newcommand{\slidegroupnode}{\noderepr{slide\_group}}
 \newcommand{\bishopgroupnode}{\noderepr{bishop\_like\_group}}
 \newcommand{\rookgroupnode}{\noderepr{rook\_like\_group}}
+\newcommand{\piece}{\noderepr{piece}}
+\newcommand{\pawn}{\noderepr{pawn}}
+\newcommand{\knight}{\noderepr{knight}}
+\newcommand{\bishoplike}{\noderepr{bishoplike}}
+\newcommand{\rooklike}{\noderepr{rooklike}}
+\newcommand{\bishop}{\noderepr{bishop}}
+\newcommand{\rook}{\noderepr{rook}}
+\newcommand{\queen}{\noderepr{queen}}
+\newcommand{\king}{\noderepr{king}}
+\newcommand{\gamestate}{\noderepr{game\_state}}
+\newcommand{\guard}{\noderepr{guard}}
+\newcommand{\push}{\noderepr{push}}
+\newcommand{\pop}{\noderepr{pop}}
+\newcommand{\threatcheck}{\noderepr{threat\_check}}
+\newcommand{\gameinfo}{\noderepr{game\_info}}
+\newcommand{\void}{\noderepr{void\_guard}}
+\newcommand{\stackend}{\noderepr{stack\_end}}
 
 \newcommand{\adj}{\edgerepr{adj}}
 \newcommand{\partof}{\edgerepr{part\_of}}
+\newcommand{\at}{\edgerepr{at}}
 
 \title{Bark: An Attributed Graph Grammar Chess Engine}
 \author{Davide Marincione}
@@ -35,7 +53,7 @@
     Finally, each \squarenode\ has a \texttt{file} and \texttt{rank} attribute, which are used to represent the position of the square on the board.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=.8\linewidth]{images/type_graph.jpg}
+        \includegraphics[width=.8\linewidth]{images/type_graph.png}
         \caption{The type graph of the system.}
     \end{figure}
 
@@ -98,5 +116,33 @@
         \includegraphics[width=.8\linewidth]{images/board.png}
         \caption{The board after hand-made ordering.}
     \end{figure}
+
+    \section{Representing game states and enabling complex behaviors}
+    Pieces are represented as nodes connected (via an \at) to the squares they are on. With a boolean \texttt{color} attribute (\texttt{false} for black pieces and \texttt{true} for white ones), \piece\ is the parent class, which is inherited by the \pawn, \knight, \bishoplike, \rooklike, and \king\ nodes. Specifically, the \bishoplike\ and \rooklike\ nodes are further inherited by \bishop, \rook, and \queen\ nodes, the latter of which is the only example of multiple inheritance in the system (as it moves like a rook and a bishop).
+    A game state is not only composed by the pieces' positions on the board, but also by the information about the current rights to move, the castling rights, the last move, and the move counters. This information is stored, explicitly via attributes and implicitly via edges, in the \gamestate.
+
+    \paragraph*{Not only structure} Until now, we've only focused on defining a representation for the game, without including a description for its behavior. Graph rewriting mechanisms by themselves are enough to define a description for the rules of a game such as chess. But, to simplify the design of complex algorithms, we define another set of nodes all inheriting from \guard. These compose a stack of operations which are used to enable only a subset of the rules at a time. Thanks to these, we were able to define the generation of moves, the evaluation of the board, the exploration of the game tree, and more.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.8\linewidth]{images/base_state.png}
+        \caption{The starting configuration of the board.}
+    \end{figure}
+    Out of these \guard\ nodes, there are three that are designed for the control of the stack itself:
+    \begin{itemize}
+        \item \gameinfo\ acts both as the start of the stack and as a container for the game information (which player is human and the depth of the search).
+        \item \void\ has a usage akin to a "no-op" operation, as it is used to block all rules until it is removed.
+        \item \stackend\ is the end of the stack, and it is used to signal which guard is at the top of the stack.
+    \end{itemize}
+
+    \section{Generating moves}
+    \paragraph*{How it is done} As cited previously, in a traditional chess engine a lot of computations are done via "magic bitboards". These are perfect hashing algorithms which can trivialize a lot of checks, even the generation of movements. Without getting into the details, the moves are produced in a two-phase manner:
+    \begin{enumerate}
+        \item The result of every possible move is generated (via magic bitboards), without any forward checking (e.g. leaving the king in check), as that is usually too complex and slow to implement. The resulting set is called "pseudo-legal moves".
+        \item For every possible resulting board, the king is checked for being in check. If it is, the move is discarded. This filtered set is called "legal moves".
+    \end{enumerate}
+    A further information to keep into account is that a chess engine usually enables "push" and "pop" operation on moves (i.e. to make a move and then undo it). This is done by keeping a stack of the boards, and pushing a new configuration every time a move is made. This is a very efficient way to implement the "undo" functionality, as it doesn't require to recompute the whole board every time. Furthermore, it is also used to implement the exploration of the game tree, as it allows backtracking to the previous state of the game.
+
+    \paragraph*{How Bark does it, at large} Bark, however, cannot use magic bitboards and, furthermore, can't afford to store a tree of board representations, as a single configuration spans many nodes and edges! We devise another system that, while extremely slower, is able to run on AGG.\\ We maintain a single board instance, which represents the state that the system is currently handling (be it the current game state or a further state being pondered upon by the engine), and represent the game tree by connecting the \gamestate\ nodes: when pushing and popping the moves, instead of retrieving a stored configuration, we use the information present on the \gamestate\ to execute or revert the move by operating on the board instance.
+    To implement push, pop and threat check operations we design multiple rules and their respective guards (\push, \pop, and \threatcheck).
 \end{document}
 
