@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{amsfonts}
 \usepackage{float}
+\usepackage{hyperref}
 
 \newcommand{\noderepr}[1]{\textsf{\textbf{#1}}}
 \newcommand{\edgerepr}[1]{\textit{\textbf{#1}}}
@@ -31,6 +32,7 @@
 \newcommand{\void}{\noderepr{void\_guard}}
 \newcommand{\stackend}{\noderepr{stack\_end}}
 \newcommand{\produce}{\noderepr{produce}}
+\newcommand{\evaluate}{\noderepr{evaluate}}
 
 \newcommand{\adj}{\edgerepr{adj}}
 \newcommand{\partof}{\edgerepr{part\_of}}
@@ -40,6 +42,7 @@
 \newcommand{\nextstate}{\edgerepr{next\_state}}
 \newcommand{\mover}{\edgerepr{mover}}
 \newcommand{\tosquare}{\edgerepr{to}}
+\newcommand{\fromsquare}{\edgerepr{from}}
 \newcommand{\threattgt}{\edgerepr{threat\_tgt}}
 \newcommand{\illegal}{\edgerepr{illegal}}
 \newcommand{\promotioninto}{\edgerepr{promotion\_into}}
@@ -265,6 +268,118 @@
             \includegraphics[width=.8\linewidth]{images/threat_knight.png}
             \caption{\texttt{threat\_knight}}
         \end{figure}
+        \item \texttt{threat\_bishop/rook\_like} are equal rules, with the only exception that one checks for attacks on diagonals and the other on vertical/horizontal lines. Both check the presence of a possible middle blocker via the \texttt{no\_blockers} rule, which again follow \ref{eq:slidegroupcheck}.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/threat_bishop_like.png}
+            \caption{\texttt{threat\_bishop\_like}}
+        \end{figure}
+        \item \texttt{threat\_king} applies for attacks from a king both from adjacent squares and diagonals, using a GAC which checks \texttt{(adj | diag)}.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/threat_king.png}
+            \caption{\texttt{threat\_king}}
+        \end{figure}
     \end{enumerate}
+
+    \paragraph*{Push} All the \texttt{push\_*} rules apply have the common behavior of adding, to the pushed \gamestate, a \fromsquare\ edge pointing to the square the moving piece is coming from. This is used to enable the \texttt{pop\_*} rules to revert the move. The rules are:
+    \begin{enumerate}
+        \item \texttt{push\_move} is the most generic of moves, and indeed it is the most "restricted" of the bunch, as it may apply to the result of any \texttt{move\_*} or \texttt{capture\_*} rule. To restrict it, we have \texttt{is\_capture}, \texttt{is\_promotion}, \texttt{is\_en\_passant} and \texttt{is\_castling} NACs. We have to devise a specific \texttt{is\_en\_passant} NAC as all other captures can easily be checked by whether there is an enemy piece on the arriving square, but en passant requires the presence of a foe pawn on the same file as the moving pawn.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/push_move.png}
+            \caption{\texttt{push\_move}}
+        \end{figure}
+        \item \texttt{push\_capture} applies whenever the \gamestate\ points the \tosquare\ edge to a square with an enemy piece. Its only NAC is \texttt{is\_promotion}, as there is a specific rule for that.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/push_capture.png}
+            \caption{\texttt{push\_capture}}
+        \end{figure}
+        \item \texttt{push\_en\_passant} applies to a very specific pattern, as it is the only capture that doesn't require the presence of an enemy piece on the arriving square.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/push_en_passant.png}
+            \caption{\texttt{push\_en\_passant}}
+        \end{figure}
+        \item \texttt{push\_castling} too is very specific, it is the only move where the king moves two squares and two pieces are moved at once. It also has to abide \texttt{f3==2?f2==3\&\&f1==0:f2==5\&\&f1==7}, which checks that the rook is in the right position.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/push_castling.png}
+            \caption{\texttt{push\_castling}}
+        \end{figure}
+        \item \texttt{push\_promotion} applies only when the \gamestate\ points to a promotion piece via the \promotioninto\ edge. In this case we need a NAC to make sure that the rule is not a capture, as there is a specific rule for that.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/push_promotion.png}
+            \caption{\texttt{push\_promotion}}
+        \end{figure}
+        \item \texttt{push\_promotion\_cap} works in much the same way of \texttt{push\_promotion}, with the only difference that it is a capture.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/push_promotion_cap.png}
+            \caption{\texttt{push\_promotion\_cap}}
+        \end{figure} 
+    \end{enumerate}
+
+    \paragraph*{Pop} As one might assume, the \texttt{pop\_*} rules are the inverse of the \texttt{push\_*} rules, and can be found to be quite similar to their counterparts. Thanks to the \fromsquare\ edges, these can be executed. They are:
+    \begin{enumerate}
+        \item \texttt{pop\_move} it has \texttt{is\_capture} and \texttt{is\_castling} NACs but, unlike its counterpart \texttt{push\_move}, it doesn't need to check for promotions, as a promoted rule doesn't have the \mover\ edge; nor does it need to check for en passant, as en passants are handled by \texttt{is\_capture} (in this case).
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/pop_move.png}
+            \caption{\texttt{pop\_move}}
+        \end{figure}
+        \item \texttt{pop\_capture} again, this doesn't have to check for promotions, as they don't have the \mover\ edge. But it has to check for en passants via the \texttt{is\_en\_passant} NAC, as, again, they are handled by another rule (as the captured piece cannot be put in the square pointed by \tosquare).
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/pop_capture.png}
+            \caption{\texttt{pop\_capture}}
+        \end{figure}
+        \item \texttt{pop\_en\_passant} like its counterpart, is quite specific (therefore the lack of NACs).
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/pop_en_passant.png}
+            \caption{\texttt{pop\_en\_passant}}
+        \end{figure}
+        \item \texttt{pop\_castling} too, like its counterpart, has to abide a rule to check that the rook is in the right position \texttt{f1==2?f2==3\&\&f3==0:f2==5\&\&f3==7}.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/pop_castling.png}
+            \caption{\texttt{pop\_castling}}
+        \end{figure}
+        \item \texttt{pop\_promotion} checks that the rule is not a capture, as it is handled by another rule (again).
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/pop_promotion.png}
+            \caption{\texttt{pop\_promotion}}
+        \end{figure}
+        \item \texttt{pop\_promotion\_cap} is the same as \texttt{pop\_promotion}, but for captures.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/pop_promotion_cap.png}
+            \caption{\texttt{pop\_promotion\_cap}}
+        \end{figure}
+    \end{enumerate}
+
+    \section{Evaluation of the board}
+    \paragraph*{How it is done} In traditional chess engines, the evaluation of the board is a complex task, as it requires to take into account a lot of factors, such as the position of the pieces, the pawn structure, the king safety, and more. This is a very complex task, as it requires a lot of heuristics and domain knowledge.
+    
+    \paragraph{How Bark does it} To save computing time, and to make it as simple as possible, in Bark we take into account three factors:
+    \begin{itemize}
+        \item The material difference between the two players.
+        \item The position of the pieces on the board.
+        \item The game phase (i.e. the number of pieces on the board).
+    \end{itemize}
+    We do this by following the \href{https://www.chessprogramming.org/PeSTO%27s_Evaluation_Function}{PeSTO (Piece Square Tables Optimized)} approach, which is a simple heuristic that assigns a value to each piece based on its position on the board and the game phase, which are very important factors in chess.
+    To this end, we have defined six \texttt{eval\_*} rules, which are applied when the \evaluate\ guard is present. Except for the piece types, the rules are all the same, and they follow the structure:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.8\linewidth]{images/eval_king.png}
+        \caption{\texttt{eval\_king}}
+    \end{figure}
+    The real difference between the rules is in how they change the attributes of the \evaluate. The original PeSTO evaluation works by using a set of tables, which are used to assign a value to each piece based on its position on the board and the game phase. In Bark, since we can't create arrays, we have rewritten these tables as a simple (and very unwieldy) set of nested ternary operators. As doing such a thing by hand would've been tedious and error-prone, we have written a formatter in Python that takes the values of the tables and outputs the nested ternary operators.
+
+    The resulting evaluation enables us to avoid the need for more complex rules and further computation, which would have been needed to create the value of the board.
 \end{document}
 

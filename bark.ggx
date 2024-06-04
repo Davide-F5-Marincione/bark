@@ -11,10 +11,6 @@
         <TaggedValue Tag="NACs" TagValue="true"/>
         <TaggedValue Tag="PACs" TagValue="true"/>
         <TaggedValue Tag="GACs" TagValue="true"/>
-        <TaggedValue Tag="layered" TagValue="true"/>
-        <TaggedValue Tag="layeredLoop" TagValue="true"/>
-        <TaggedValue Tag="breakAllLayer" TagValue="true"/>
-        <TaggedValue Tag="showGraphAfterStep" TagValue="true"/>
         <TaggedValue Tag="TypeGraphLevel" TagValue="ENABLED_MAX_MIN"/>
         <Types>
             <NodeType ID="I2" abstract="true" name="piece%:ROUNDRECT:java.awt.Color[r=0,g=0,b=0]:[NODE]:">
@@ -15513,13 +15509,13 @@
                 <Mapping image="I4128" orig="I4105"/>
                 <Mapping image="I4127" orig="I4106"/>
                 <Mapping image="I4126" orig="I4107"/>
-                <Mapping image="I4129" orig="I4108"/>
-                <Mapping image="I4138" orig="I4113"/>
-                <Mapping image="I4131" orig="I4110"/>
                 <Mapping image="I4137" orig="I4114"/>
                 <Mapping image="I4139" orig="I4112"/>
-                <Mapping image="I4132" orig="I4111"/>
+                <Mapping image="I4131" orig="I4110"/>
+                <Mapping image="I4138" orig="I4113"/>
                 <Mapping image="I4130" orig="I4109"/>
+                <Mapping image="I4132" orig="I4111"/>
+                <Mapping image="I4129" orig="I4108"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -15771,13 +15767,13 @@
                 <Mapping image="I4192" orig="I4171"/>
                 <Mapping image="I4193" orig="I4173"/>
                 <Mapping image="I4194" orig="I4172"/>
-                <Mapping image="I4198" orig="I4177"/>
                 <Mapping image="I4204" orig="I4178"/>
                 <Mapping image="I4197" orig="I4176"/>
-                <Mapping image="I4195" orig="I4174"/>
-                <Mapping image="I4203" orig="I4179"/>
+                <Mapping image="I4198" orig="I4177"/>
                 <Mapping image="I4196" orig="I4175"/>
+                <Mapping image="I4195" orig="I4174"/>
                 <Mapping image="I4205" orig="I4180"/>
+                <Mapping image="I4203" orig="I4179"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -16054,17 +16050,17 @@
                 <Mapping image="I4272" orig="I4249"/>
                 <Mapping image="I4273" orig="I4250"/>
                 <Mapping image="I4274" orig="I4251"/>
-                <Mapping image="I4276" orig="I4253"/>
-                <Mapping image="I4275" orig="I4252"/>
-                <Mapping image="I4278" orig="I4255"/>
-                <Mapping image="I4284" orig="I4261"/>
-                <Mapping image="I4281" orig="I4258"/>
-                <Mapping image="I4279" orig="I4256"/>
                 <Mapping image="I4277" orig="I4254"/>
-                <Mapping image="I4283" orig="I4260"/>
-                <Mapping image="I4285" orig="I4262"/>
-                <Mapping image="I4280" orig="I4257"/>
+                <Mapping image="I4278" orig="I4255"/>
+                <Mapping image="I4275" orig="I4252"/>
+                <Mapping image="I4276" orig="I4253"/>
                 <Mapping image="I4282" orig="I4259"/>
+                <Mapping image="I4285" orig="I4262"/>
+                <Mapping image="I4284" orig="I4261"/>
+                <Mapping image="I4279" orig="I4256"/>
+                <Mapping image="I4283" orig="I4260"/>
+                <Mapping image="I4281" orig="I4258"/>
+                <Mapping image="I4280" orig="I4257"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -16280,8 +16276,8 @@
                 <Mapping image="I4337" orig="I4321"/>
                 <Mapping image="I4339" orig="I4317"/>
                 <Mapping image="I4345" orig="I4324"/>
-                <Mapping image="I4347" orig="I4330"/>
                 <Mapping image="I4355" orig="I4331"/>
+                <Mapping image="I4347" orig="I4330"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -16468,8 +16464,8 @@
                 <Mapping image="I4388" orig="I4371"/>
                 <Mapping image="I4390" orig="I4367"/>
                 <Mapping image="I4399" orig="I4374"/>
-                <Mapping image="I4409" orig="I4382"/>
                 <Mapping image="I4401" orig="I4381"/>
+                <Mapping image="I4409" orig="I4382"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -16787,8 +16783,8 @@
                 <Mapping image="I4494" orig="I4481"/>
                 <Mapping image="I4496" orig="I4484"/>
                 <Mapping image="I4498" orig="I4486"/>
-                <Mapping image="I4503" orig="I4489"/>
                 <Mapping image="I4504" orig="I4488"/>
+                <Mapping image="I4503" orig="I4489"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -17263,16 +17259,16 @@
                 <Mapping image="I4619" orig="I4572"/>
                 <Mapping image="I4621" orig="I4574"/>
                 <Mapping image="I4635" orig="I4582"/>
-                <Mapping image="I4630" orig="I4577"/>
-                <Mapping image="I4633" orig="I4580"/>
-                <Mapping image="I4631" orig="I4578"/>
-                <Mapping image="I4642" orig="I4585"/>
-                <Mapping image="I4636" orig="I4583"/>
                 <Mapping image="I4640" orig="I4584"/>
-                <Mapping image="I4629" orig="I4576"/>
+                <Mapping image="I4633" orig="I4580"/>
                 <Mapping image="I4632" orig="I4579"/>
+                <Mapping image="I4642" orig="I4585"/>
+                <Mapping image="I4629" orig="I4576"/>
                 <Mapping image="I4634" orig="I4581"/>
                 <Mapping image="I4641" orig="I4586"/>
+                <Mapping image="I4631" orig="I4578"/>
+                <Mapping image="I4630" orig="I4577"/>
+                <Mapping image="I4636" orig="I4583"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -17665,12 +17661,12 @@
                 <Mapping image="I4735" orig="I4700"/>
                 <Mapping image="I4737" orig="I4702"/>
                 <Mapping image="I4739" orig="I4704"/>
+                <Mapping image="I4751" orig="I4708"/>
                 <Mapping image="I4754" orig="I4712"/>
                 <Mapping image="I4748" orig="I4707"/>
-                <Mapping image="I4755" orig="I4710"/>
-                <Mapping image="I4751" orig="I4708"/>
-                <Mapping image="I4747" orig="I4706"/>
                 <Mapping image="I4753" orig="I4709"/>
+                <Mapping image="I4747" orig="I4706"/>
+                <Mapping image="I4755" orig="I4710"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -18113,10 +18109,10 @@
                 <Mapping image="I4868" orig="I4826"/>
                 <Mapping image="I4869" orig="I4827"/>
                 <Mapping image="I4888" orig="I4836"/>
-                <Mapping image="I4873" orig="I4830"/>
-                <Mapping image="I4886" orig="I4834"/>
                 <Mapping image="I4887" orig="I4835"/>
                 <Mapping image="I4874" orig="I4833"/>
+                <Mapping image="I4886" orig="I4834"/>
+                <Mapping image="I4873" orig="I4830"/>
                 <Mapping image="I4875" orig="I4831"/>
             </Morphism>
             <ApplCondition>
@@ -18559,12 +18555,12 @@
                 <Mapping image="I4984" orig="I4948"/>
                 <Mapping image="I4992" orig="I4950"/>
                 <Mapping image="I4993" orig="I4951"/>
-                <Mapping image="I5010" orig="I4958"/>
-                <Mapping image="I4997" orig="I4954"/>
-                <Mapping image="I4999" orig="I4955"/>
+                <Mapping image="I5012" orig="I4960"/>
                 <Mapping image="I4998" orig="I4957"/>
                 <Mapping image="I5011" orig="I4959"/>
-                <Mapping image="I5012" orig="I4960"/>
+                <Mapping image="I5010" orig="I4958"/>
+                <Mapping image="I4999" orig="I4955"/>
+                <Mapping image="I4997" orig="I4954"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -18975,11 +18971,11 @@
                 <Mapping image="I5102" orig="I5069"/>
                 <Mapping image="I5104" orig="I5071"/>
                 <Mapping image="I5106" orig="I5073"/>
-                <Mapping image="I5120" orig="I5078"/>
-                <Mapping image="I5115" orig="I5076"/>
                 <Mapping image="I5119" orig="I5077"/>
-                <Mapping image="I5121" orig="I5079"/>
+                <Mapping image="I5120" orig="I5078"/>
                 <Mapping image="I5114" orig="I5075"/>
+                <Mapping image="I5115" orig="I5076"/>
+                <Mapping image="I5121" orig="I5079"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -19670,11 +19666,11 @@
                 <Mapping image="I5245" orig="I5170"/>
                 <Mapping image="I5247" orig="I5178"/>
                 <Mapping image="I5249" orig="I5180"/>
+                <Mapping image="I5279" orig="I5184"/>
+                <Mapping image="I5275" orig="I5182"/>
                 <Mapping image="I5291" orig="I5186"/>
                 <Mapping image="I5276" orig="I5183"/>
                 <Mapping image="I5290" orig="I5185"/>
-                <Mapping image="I5275" orig="I5182"/>
-                <Mapping image="I5279" orig="I5184"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -20356,11 +20352,11 @@
                 <Mapping image="I5433" orig="I5370"/>
                 <Mapping image="I5435" orig="I5378"/>
                 <Mapping image="I5437" orig="I5380"/>
-                <Mapping image="I5476" orig="I5383"/>
-                <Mapping image="I5479" orig="I5384"/>
-                <Mapping image="I5486" orig="I5385"/>
-                <Mapping image="I5475" orig="I5382"/>
                 <Mapping image="I5487" orig="I5386"/>
+                <Mapping image="I5475" orig="I5382"/>
+                <Mapping image="I5476" orig="I5383"/>
+                <Mapping image="I5486" orig="I5385"/>
+                <Mapping image="I5479" orig="I5384"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -20734,12 +20730,12 @@
                 <Mapping image="I5614" orig="I5572"/>
                 <Mapping image="I5616" orig="I5580"/>
                 <Mapping image="I5618" orig="I5582"/>
-                <Mapping image="I5633" orig="I5589"/>
-                <Mapping image="I5628" orig="I5586"/>
                 <Mapping image="I5631" orig="I5587"/>
                 <Mapping image="I5632" orig="I5588"/>
                 <Mapping image="I5626" orig="I5584"/>
+                <Mapping image="I5633" orig="I5589"/>
                 <Mapping image="I5627" orig="I5585"/>
+                <Mapping image="I5628" orig="I5586"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -21169,12 +21165,12 @@
                 <Mapping image="I5737" orig="I5701"/>
                 <Mapping image="I5745" orig="I5680"/>
                 <Mapping image="I5747" orig="I5703"/>
-                <Mapping image="I5767" orig="I5713"/>
-                <Mapping image="I5754" orig="I5710"/>
-                <Mapping image="I5766" orig="I5712"/>
                 <Mapping image="I5752" orig="I5708"/>
-                <Mapping image="I5753" orig="I5709"/>
+                <Mapping image="I5754" orig="I5710"/>
+                <Mapping image="I5767" orig="I5713"/>
+                <Mapping image="I5766" orig="I5712"/>
                 <Mapping image="I5749" orig="I5707"/>
+                <Mapping image="I5753" orig="I5709"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -21984,13 +21980,13 @@
                 <Mapping image="I5912" orig="I5836"/>
                 <Mapping image="I5938" orig="I5840"/>
                 <Mapping image="I5940" orig="I5838"/>
+                <Mapping image="I5999" orig="I5850"/>
+                <Mapping image="I6000" orig="I5849"/>
                 <Mapping image="I5945" orig="I5844"/>
                 <Mapping image="I5942" orig="I5843"/>
-                <Mapping image="I5956" orig="I5845"/>
-                <Mapping image="I6000" orig="I5849"/>
-                <Mapping image="I6001" orig="I5848"/>
-                <Mapping image="I5999" orig="I5850"/>
                 <Mapping image="I5957" orig="I5846"/>
+                <Mapping image="I5956" orig="I5845"/>
+                <Mapping image="I6001" orig="I5848"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -22688,13 +22684,13 @@
                 <Mapping image="I6107" orig="I6043"/>
                 <Mapping image="I6145" orig="I6045"/>
                 <Mapping image="I6147" orig="I6048"/>
-                <Mapping image="I6152" orig="I6051"/>
                 <Mapping image="I6207" orig="I6055"/>
-                <Mapping image="I6208" orig="I6056"/>
-                <Mapping image="I6159" orig="I6052"/>
                 <Mapping image="I6160" orig="I6053"/>
-                <Mapping image="I6149" orig="I6050"/>
                 <Mapping image="I6206" orig="I6057"/>
+                <Mapping image="I6149" orig="I6050"/>
+                <Mapping image="I6159" orig="I6052"/>
+                <Mapping image="I6208" orig="I6056"/>
+                <Mapping image="I6152" orig="I6051"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -22986,10 +22982,10 @@
                 <Mapping image="I6267" orig="I6241"/>
                 <Mapping image="I6269" orig="I6231"/>
                 <Mapping image="I6271" orig="I6243"/>
-                <Mapping image="I6280" orig="I6246"/>
-                <Mapping image="I6284" orig="I6248"/>
                 <Mapping image="I6285" orig="I6247"/>
+                <Mapping image="I6280" orig="I6246"/>
                 <Mapping image="I6279" orig="I6245"/>
+                <Mapping image="I6284" orig="I6248"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -23351,12 +23347,12 @@
                 <Mapping image="I6380" orig="I6341"/>
                 <Mapping image="I6382" orig="I6339"/>
                 <Mapping image="I6400" orig="I6349"/>
-                <Mapping image="I6388" orig="I6345"/>
-                <Mapping image="I6402" orig="I6347"/>
                 <Mapping image="I6389" orig="I6344"/>
+                <Mapping image="I6384" orig="I6343"/>
                 <Mapping image="I6403" orig="I6348"/>
                 <Mapping image="I6401" orig="I6350"/>
-                <Mapping image="I6384" orig="I6343"/>
+                <Mapping image="I6402" orig="I6347"/>
+                <Mapping image="I6388" orig="I6345"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -23811,12 +23807,12 @@
                 <Mapping image="I6501" orig="I6455"/>
                 <Mapping image="I6503" orig="I6459"/>
                 <Mapping image="I6514" orig="I6466"/>
-                <Mapping image="I6511" orig="I6463"/>
-                <Mapping image="I6512" orig="I6464"/>
+                <Mapping image="I6530" orig="I6469"/>
                 <Mapping image="I6509" orig="I6462"/>
                 <Mapping image="I6513" orig="I6465"/>
-                <Mapping image="I6530" orig="I6469"/>
                 <Mapping image="I6531" orig="I6468"/>
+                <Mapping image="I6511" orig="I6463"/>
+                <Mapping image="I6512" orig="I6464"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -24321,14 +24317,14 @@
                 <Mapping image="I6646" orig="I6595"/>
                 <Mapping image="I6648" orig="I6599"/>
                 <Mapping image="I6650" orig="I6603"/>
-                <Mapping image="I6679" orig="I6614"/>
                 <Mapping image="I6678" orig="I6613"/>
+                <Mapping image="I6679" orig="I6614"/>
                 <Mapping image="I6658" orig="I6607"/>
                 <Mapping image="I6656" orig="I6606"/>
-                <Mapping image="I6659" orig="I6608"/>
-                <Mapping image="I6660" orig="I6609"/>
                 <Mapping image="I6677" orig="I6612"/>
                 <Mapping image="I6661" orig="I6610"/>
+                <Mapping image="I6660" orig="I6609"/>
+                <Mapping image="I6659" orig="I6608"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -24456,7 +24452,7 @@
             <Parameter name="c" type="boolean"/>
             <Graph ID="I6719" kind="LHS" name="LeftOf_threat_knight">
                 <Node ID="I6720" type="I68">
-                    <NodeLayout X="73" Y="316"/>
+                    <NodeLayout X="39" Y="265"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6722" type="I9">
@@ -24465,43 +24461,43 @@
                             <string>c</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="266" Y="65"/>
+                    <NodeLayout X="228" Y="55"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6725" type="I33">
-                    <NodeLayout X="187" Y="120"/>
+                    <NodeLayout X="129" Y="47"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6727" type="I33">
-                    <NodeLayout X="108" Y="244"/>
+                    <NodeLayout X="37" Y="152"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6729" type="I33">
-                    <NodeLayout X="185" Y="247"/>
+                    <NodeLayout X="127" Y="162"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6731" type="I33">
-                    <NodeLayout X="175" Y="202"/>
+                    <NodeLayout X="130" Y="103"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6733" type="I33">
-                    <NodeLayout X="94" Y="113"/>
+                    <NodeLayout X="33" Y="41"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6735" type="I33">
-                    <NodeLayout X="96" Y="191"/>
+                    <NodeLayout X="35" Y="91"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6737" type="I77">
-                    <NodeLayout X="162" Y="350"/>
+                    <NodeLayout X="140" Y="258"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6739" type="I78">
-                    <NodeLayout X="305" Y="349"/>
+                    <NodeLayout X="254" Y="259"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6741" type="I60">
-                    <NodeLayout X="320" Y="201"/>
+                    <NodeLayout X="237" Y="132"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I6743" source="I6722" target="I6725" type="I102">
@@ -24560,7 +24556,7 @@
             </Graph>
             <Graph ID="I6757" kind="RHS" name="RightOf_threat_knight">
                 <Node ID="I6758" type="I68">
-                    <NodeLayout X="73" Y="316"/>
+                    <NodeLayout X="103" Y="280"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6760" type="I9">
@@ -24568,35 +24564,35 @@
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6762" type="I33">
-                    <NodeLayout X="187" Y="120"/>
+                    <NodeLayout X="154" Y="71"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6764" type="I33">
-                    <NodeLayout X="108" Y="244"/>
+                    <NodeLayout X="59" Y="191"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6766" type="I33">
-                    <NodeLayout X="94" Y="113"/>
+                    <NodeLayout X="51" Y="59"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6768" type="I33">
-                    <NodeLayout X="96" Y="191"/>
+                    <NodeLayout X="58" Y="131"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6770" type="I33">
-                    <NodeLayout X="175" Y="202"/>
+                    <NodeLayout X="159" Y="146"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6772" type="I33">
-                    <NodeLayout X="185" Y="247"/>
+                    <NodeLayout X="156" Y="197"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6774" type="I78">
-                    <NodeLayout X="356" Y="349"/>
+                    <NodeLayout X="244" Y="275"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6776" type="I60">
-                    <NodeLayout X="320" Y="201"/>
+                    <NodeLayout X="293" Y="146"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I6778" source="I6760" target="I6762" type="I102">
@@ -24636,7 +24632,7 @@
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
                 <Edge ID="I6787" source="I6776" target="I6776" type="I116">
-                    <EdgeLayout bendX="261" bendY="176" loopH="20"
+                    <EdgeLayout bendX="234" bendY="121" loopH="20"
                         loopW="20" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
@@ -24652,14 +24648,14 @@
                 <Mapping image="I6772" orig="I6729"/>
                 <Mapping image="I6774" orig="I6739"/>
                 <Mapping image="I6776" orig="I6741"/>
-                <Mapping image="I6779" orig="I6747"/>
-                <Mapping image="I6783" orig="I6745"/>
-                <Mapping image="I6784" orig="I6744"/>
-                <Mapping image="I6781" orig="I6755"/>
-                <Mapping image="I6780" orig="I6748"/>
                 <Mapping image="I6782" orig="I6746"/>
-                <Mapping image="I6778" orig="I6743"/>
+                <Mapping image="I6784" orig="I6744"/>
+                <Mapping image="I6779" orig="I6747"/>
+                <Mapping image="I6780" orig="I6748"/>
                 <Mapping image="I6785" orig="I6749"/>
+                <Mapping image="I6778" orig="I6743"/>
+                <Mapping image="I6783" orig="I6745"/>
+                <Mapping image="I6781" orig="I6755"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="1"/>
@@ -24674,7 +24670,7 @@
             <Parameter name="r3" type="int"/>
             <Graph ID="I6790" kind="LHS" name="LeftOf_threat_bishop_like">
                 <Node ID="I6791" type="I68">
-                    <NodeLayout X="73" Y="316"/>
+                    <NodeLayout X="51" Y="223"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6793" type="I33">
@@ -24688,7 +24684,7 @@
                             <string>r1</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="187" Y="120"/>
+                    <NodeLayout X="232" Y="115"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6797" type="I33">
@@ -24702,15 +24698,15 @@
                             <string>r2</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="108" Y="244"/>
+                    <NodeLayout X="100" Y="122"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6801" type="I77">
-                    <NodeLayout X="162" Y="350"/>
+                    <NodeLayout X="160" Y="227"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6803" type="I78">
-                    <NodeLayout X="305" Y="349"/>
+                    <NodeLayout X="287" Y="248"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6805" type="I13">
@@ -24719,15 +24715,15 @@
                             <string>c</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="312" Y="141"/>
+                    <NodeLayout X="331" Y="132"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6808" type="I54">
-                    <NodeLayout X="61" Y="86"/>
+                    <NodeLayout X="165" Y="54"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6809" type="I60">
-                    <NodeLayout X="276" Y="245"/>
+                    <NodeLayout X="162" Y="320"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I6811" source="I6801" target="I6803" type="I113">
@@ -24766,31 +24762,31 @@
             </Graph>
             <Graph ID="I6820" kind="RHS" name="RightOf_threat_bishop_like">
                 <Node ID="I6821" type="I68">
-                    <NodeLayout X="73" Y="316"/>
+                    <NodeLayout X="55" Y="177"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6823" type="I33">
-                    <NodeLayout X="187" Y="120"/>
+                    <NodeLayout X="205" Y="102"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6825" type="I33">
-                    <NodeLayout X="108" Y="244"/>
+                    <NodeLayout X="59" Y="103"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6827" type="I78">
-                    <NodeLayout X="305" Y="349"/>
+                    <NodeLayout X="208" Y="183"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6829" type="I13">
-                    <NodeLayout X="312" Y="141"/>
+                    <NodeLayout X="321" Y="108"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6831" type="I54">
-                    <NodeLayout X="61" Y="86"/>
+                    <NodeLayout X="135" Y="50"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6832" type="I60">
-                    <NodeLayout X="276" Y="245"/>
+                    <NodeLayout X="135" Y="274"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I6834" source="I6829" target="I6823" type="I102">
@@ -24810,7 +24806,7 @@
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
                 <Edge ID="I6838" source="I6832" target="I6832" type="I116">
-                    <EdgeLayout bendX="220" bendY="220" loopH="20"
+                    <EdgeLayout bendX="79" bendY="249" loopH="20"
                         loopW="20" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
@@ -24823,25 +24819,25 @@
                 <Mapping image="I6829" orig="I6805"/>
                 <Mapping image="I6831" orig="I6808"/>
                 <Mapping image="I6832" orig="I6809"/>
-                <Mapping image="I6836" orig="I6818"/>
-                <Mapping image="I6835" orig="I6817"/>
                 <Mapping image="I6834" orig="I6816"/>
+                <Mapping image="I6835" orig="I6817"/>
+                <Mapping image="I6836" orig="I6818"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
                     <Graph ID="I6839" kind="NAC" name="no_blockers">
                         <Node ID="I6840" type="I33">
-                            <NodeLayout X="38" Y="193"/>
+                            <NodeLayout X="46" Y="83"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I6842" type="I54">
-                            <NodeLayout X="61" Y="86"/>
+                            <NodeLayout X="117" Y="38"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I6843" type="I33">
-                            <NodeLayout X="242" Y="187"/>
+                            <NodeLayout X="199" Y="87"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -24856,12 +24852,12 @@
                                     <string>r3</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="124" Y="193"/>
+                            <NodeLayout X="114" Y="130"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I6849" type="I2">
-                            <NodeLayout X="132" Y="285"/>
+                            <NodeLayout X="109" Y="219"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -24890,8 +24886,8 @@
                         <Mapping image="I6840" orig="I6797"/>
                         <Mapping image="I6842" orig="I6808"/>
                         <Mapping image="I6843" orig="I6793"/>
-                        <Mapping image="I6851" orig="I6818"/>
                         <Mapping image="I6852" orig="I6817"/>
+                        <Mapping image="I6851" orig="I6818"/>
                     </Morphism>
                 </NAC>
                 <AttrCondition>
@@ -25064,9 +25060,9 @@
                 <Mapping image="I6897" orig="I6873"/>
                 <Mapping image="I6898" orig="I6874"/>
                 <Mapping image="I6900" orig="I6877"/>
-                <Mapping image="I6902" orig="I6884"/>
                 <Mapping image="I6904" orig="I6886"/>
                 <Mapping image="I6903" orig="I6885"/>
+                <Mapping image="I6902" orig="I6884"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -25131,8 +25127,8 @@
                         <Mapping image="I6908" orig="I6865"/>
                         <Mapping image="I6910" orig="I6861"/>
                         <Mapping image="I6918" orig="I6873"/>
-                        <Mapping image="I6920" orig="I6884"/>
                         <Mapping image="I6921" orig="I6885"/>
+                        <Mapping image="I6920" orig="I6884"/>
                     </Morphism>
                 </NAC>
                 <AttrCondition>
@@ -25157,7 +25153,7 @@
                             <string>r1</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="192" Y="147"/>
+                    <NodeLayout X="141" Y="59"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6930" type="I33">
@@ -25166,7 +25162,7 @@
                             <string>r2</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="109" Y="281"/>
+                    <NodeLayout X="48" Y="126"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6933" type="I5">
@@ -25175,27 +25171,27 @@
                             <string>c</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="292" Y="105"/>
+                    <NodeLayout X="149" Y="118"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6936" type="I68">
-                    <NodeLayout X="23" Y="449"/>
+                    <NodeLayout X="41" Y="237"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6938" type="I77">
-                    <NodeLayout X="113" Y="483"/>
+                    <NodeLayout X="157" Y="241"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6940" type="I78">
-                    <NodeLayout X="256" Y="481"/>
+                    <NodeLayout X="278" Y="235"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6942" type="I33">
-                    <NodeLayout X="91" Y="164"/>
+                    <NodeLayout X="48" Y="57"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6944" type="I60">
-                    <NodeLayout X="297" Y="329"/>
+                    <NodeLayout X="237" Y="118"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I6946" source="I6933" target="I6927" type="I102">
@@ -25234,31 +25230,31 @@
             </Graph>
             <Graph ID="I6955" kind="RHS" name="RightOf_threat_pawn">
                 <Node ID="I6956" type="I5">
-                    <NodeLayout X="292" Y="105"/>
+                    <NodeLayout X="265" Y="75"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6958" type="I33">
-                    <NodeLayout X="192" Y="147"/>
+                    <NodeLayout X="151" Y="68"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6960" type="I33">
-                    <NodeLayout X="113" Y="271"/>
+                    <NodeLayout X="50" Y="136"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6962" type="I68">
-                    <NodeLayout X="23" Y="449"/>
+                    <NodeLayout X="62" Y="227"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6964" type="I78">
-                    <NodeLayout X="256" Y="482"/>
+                    <NodeLayout X="223" Y="232"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6966" type="I33">
-                    <NodeLayout X="91" Y="164"/>
+                    <NodeLayout X="54" Y="62"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6968" type="I60">
-                    <NodeLayout X="297" Y="329"/>
+                    <NodeLayout X="185" Y="146"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I6970" source="I6956" target="I6958" type="I102">
@@ -25278,7 +25274,7 @@
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
                 <Edge ID="I6974" source="I6968" target="I6968" type="I116">
-                    <EdgeLayout bendX="241" bendY="304" loopH="20"
+                    <EdgeLayout bendX="129" bendY="121" loopH="20"
                         loopW="20" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
@@ -25291,9 +25287,9 @@
                 <Mapping image="I6964" orig="I6940"/>
                 <Mapping image="I6966" orig="I6942"/>
                 <Mapping image="I6968" orig="I6944"/>
+                <Mapping image="I6970" orig="I6946"/>
                 <Mapping image="I6971" orig="I6952"/>
                 <Mapping image="I6972" orig="I6953"/>
-                <Mapping image="I6970" orig="I6946"/>
             </Morphism>
             <ApplCondition>
                 <AttrCondition>
@@ -25311,11 +25307,11 @@
             <Parameter name="c" type="boolean"/>
             <Graph ID="I6978" kind="LHS" name="LeftOf_threat_king">
                 <Node ID="I6979" type="I33">
-                    <NodeLayout X="160" Y="271"/>
+                    <NodeLayout X="141" Y="166"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6981" type="I33">
-                    <NodeLayout X="239" Y="147"/>
+                    <NodeLayout X="72" Y="65"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6983" type="I29">
@@ -25324,23 +25320,23 @@
                             <string>c</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="353" Y="105"/>
+                    <NodeLayout X="164" Y="63"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6986" type="I68">
-                    <NodeLayout X="93" Y="467"/>
+                    <NodeLayout X="91" Y="256"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6988" type="I77">
-                    <NodeLayout X="183" Y="501"/>
+                    <NodeLayout X="201" Y="255"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6990" type="I78">
-                    <NodeLayout X="326" Y="499"/>
+                    <NodeLayout X="330" Y="262"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I6992" type="I60">
-                    <NodeLayout X="318" Y="291"/>
+                    <NodeLayout X="291" Y="158"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I6994" source="I6983" target="I6981" type="I102">
@@ -25371,27 +25367,27 @@
             </Graph>
             <Graph ID="I7001" kind="RHS" name="RightOf_threat_king">
                 <Node ID="I7002" type="I33">
-                    <NodeLayout X="160" Y="271"/>
+                    <NodeLayout X="107" Y="154"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7004" type="I33">
-                    <NodeLayout X="239" Y="147"/>
+                    <NodeLayout X="116" Y="75"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7006" type="I29">
-                    <NodeLayout X="353" Y="105"/>
+                    <NodeLayout X="216" Y="77"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7008" type="I68">
-                    <NodeLayout X="93" Y="467"/>
+                    <NodeLayout X="75" Y="258"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7010" type="I78">
-                    <NodeLayout X="326" Y="499"/>
+                    <NodeLayout X="244" Y="276"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7012" type="I60">
-                    <NodeLayout X="318" Y="291"/>
+                    <NodeLayout X="244" Y="163"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7014" source="I7006" target="I7004" type="I102">
@@ -25403,7 +25399,7 @@
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
                 <Edge ID="I7016" source="I7012" target="I7012" type="I116">
-                    <EdgeLayout bendX="262" bendY="266" loopH="20"
+                    <EdgeLayout bendX="188" bendY="138" loopH="20"
                         loopW="20" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
@@ -25426,7 +25422,7 @@
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7020" type="I33">
-                            <NodeLayout X="160" Y="271"/>
+                            <NodeLayout X="116" Y="137"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25444,22 +25440,22 @@
                 <NestedAC>
                     <Graph ID="I7023" kind="AC" name="diag">
                         <Node ID="I7024" type="I33">
-                            <NodeLayout X="160" Y="271"/>
+                            <NodeLayout X="55" Y="110"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7026" type="I33">
-                            <NodeLayout X="239" Y="147"/>
+                            <NodeLayout X="160" Y="60"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7028" type="I33">
-                            <NodeLayout X="255" Y="238"/>
+                            <NodeLayout X="157" Y="108"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7030" type="I33">
-                            <NodeLayout X="149" Y="156"/>
+                            <NodeLayout X="61" Y="53"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25498,31 +25494,31 @@
             <Parameter name="r" type="int"/>
             <Graph ID="I7038" kind="LHS" name="LeftOf_push_move">
                 <Node ID="I7039" type="I68">
-                    <NodeLayout X="107" Y="403"/>
+                    <NodeLayout X="34" Y="231"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7041" type="I74">
-                    <NodeLayout X="183" Y="410"/>
+                    <NodeLayout X="133" Y="233"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7043" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="239" Y="227"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7045" type="I60">
-                    <NodeLayout X="175" Y="313"/>
+                    <NodeLayout X="52" Y="122"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7047" type="I2">
-                    <NodeLayout X="136" Y="160"/>
+                    <NodeLayout X="57" Y="47"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7049" type="I33">
-                    <NodeLayout X="82" Y="205"/>
+                    <NodeLayout X="174" Y="45"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7051" type="I33">
-                    <NodeLayout X="220" Y="206"/>
+                    <NodeLayout X="161" Y="110"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7053" source="I7039" target="I7041" type="I113">
@@ -25552,27 +25548,27 @@
             </Graph>
             <Graph ID="I7059" kind="RHS" name="RightOf_push_move">
                 <Node ID="I7060" type="I68">
-                    <NodeLayout X="147" Y="408"/>
+                    <NodeLayout X="50" Y="252"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7062" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="213" Y="254"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7064" type="I60">
-                    <NodeLayout X="175" Y="313"/>
+                    <NodeLayout X="128" Y="177"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7066" type="I2">
-                    <NodeLayout X="136" Y="160"/>
+                    <NodeLayout X="119" Y="55"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7068" type="I33">
-                    <NodeLayout X="82" Y="205"/>
+                    <NodeLayout X="49" Y="111"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7070" type="I33">
-                    <NodeLayout X="220" Y="206"/>
+                    <NodeLayout X="211" Y="96"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7072" source="I7066" target="I7064" type="I105">
@@ -25603,19 +25599,19 @@
                 <Mapping image="I7066" orig="I7047"/>
                 <Mapping image="I7068" orig="I7049"/>
                 <Mapping image="I7070" orig="I7051"/>
-                <Mapping image="I7072" orig="I7057"/>
                 <Mapping image="I7073" orig="I7058"/>
+                <Mapping image="I7072" orig="I7057"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
                     <Graph ID="I7077" kind="NAC" name="is_capture">
                         <Node ID="I7078" type="I2">
-                            <NodeLayout X="103" Y="215"/>
+                            <NodeLayout X="63" Y="87"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7080" type="I33">
-                            <NodeLayout X="220" Y="206"/>
+                            <NodeLayout X="164" Y="85"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25632,12 +25628,12 @@
                 <NAC>
                     <Graph ID="I7083" kind="NAC" name="is_promotion">
                         <Node ID="I7084" type="I60">
-                            <NodeLayout X="175" Y="313"/>
+                            <NodeLayout X="196" Y="53"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7086" type="I2">
-                            <NodeLayout X="65" Y="347"/>
+                            <NodeLayout X="71" Y="88"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25654,7 +25650,7 @@
                 <NAC>
                     <Graph ID="I7089" kind="NAC" name="is_en_passant">
                         <Node ID="I7090" type="I5">
-                            <NodeLayout X="101" Y="252"/>
+                            <NodeLayout X="45" Y="54"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25664,7 +25660,7 @@
                                     <string>f</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="221" Y="255"/>
+                            <NodeLayout X="215" Y="122"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25674,17 +25670,17 @@
                                     <string>f</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="219" Y="144"/>
+                            <NodeLayout X="137" Y="54"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7098" type="I5">
-                            <NodeLayout X="175" Y="332"/>
+                            <NodeLayout X="194" Y="225"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7100" type="I60">
-                            <NodeLayout X="60" Y="400"/>
+                            <NodeLayout X="105" Y="124"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25694,12 +25690,12 @@
                                     <string>f</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="230" Y="202"/>
+                            <NodeLayout X="221" Y="55"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7105" type="I60">
-                            <NodeLayout X="214" Y="389"/>
+                            <NodeLayout X="46" Y="218"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25748,7 +25744,7 @@
                 <NAC>
                     <Graph ID="I7114" kind="NAC" name="is_castling">
                         <Node ID="I7115" type="I29">
-                            <NodeLayout X="89" Y="223"/>
+                            <NodeLayout X="140" Y="136"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25758,7 +25754,7 @@
                                     <string>r</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="69" Y="177"/>
+                            <NodeLayout X="58" Y="72"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25768,7 +25764,7 @@
                                     <string>r</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="254" Y="169"/>
+                            <NodeLayout X="254" Y="72"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25778,7 +25774,7 @@
                                     <string>r</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="164" Y="165"/>
+                            <NodeLayout X="151" Y="71"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25806,35 +25802,35 @@
         <Rule ID="I7128" formula="true" name="push_capture">
             <Graph ID="I7130" kind="LHS" name="LeftOf_push_capture">
                 <Node ID="I7131" type="I68">
-                    <NodeLayout X="107" Y="403"/>
+                    <NodeLayout X="38" Y="226"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7133" type="I74">
-                    <NodeLayout X="183" Y="410"/>
+                    <NodeLayout X="134" Y="246"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7135" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="235" Y="235"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7137" type="I60">
-                    <NodeLayout X="175" Y="313"/>
+                    <NodeLayout X="138" Y="172"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7139" type="I2">
-                    <NodeLayout X="136" Y="160"/>
+                    <NodeLayout X="96" Y="52"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7141" type="I33">
-                    <NodeLayout X="82" Y="205"/>
+                    <NodeLayout X="57" Y="88"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7143" type="I33">
-                    <NodeLayout X="220" Y="206"/>
+                    <NodeLayout X="210" Y="93"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7145" type="I2">
-                    <NodeLayout X="318" Y="141"/>
+                    <NodeLayout X="229" Y="54"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7147" source="I7131" target="I7133" type="I113">
@@ -25868,31 +25864,31 @@
             </Graph>
             <Graph ID="I7154" kind="RHS" name="RightOf_push_capture">
                 <Node ID="I7155" type="I68">
-                    <NodeLayout X="147" Y="408"/>
+                    <NodeLayout X="54" Y="257"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7157" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="213" Y="258"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7159" type="I60">
-                    <NodeLayout X="175" Y="313"/>
+                    <NodeLayout X="149" Y="169"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7161" type="I2">
-                    <NodeLayout X="136" Y="160"/>
+                    <NodeLayout X="154" Y="52"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7163" type="I33">
-                    <NodeLayout X="82" Y="205"/>
+                    <NodeLayout X="62" Y="88"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7165" type="I33">
-                    <NodeLayout X="220" Y="206"/>
+                    <NodeLayout X="221" Y="100"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7167" type="I2">
-                    <NodeLayout X="361" Y="175"/>
+                    <NodeLayout X="288" Y="198"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7169" source="I7161" target="I7159" type="I105">
@@ -25928,19 +25924,19 @@
                 <Mapping image="I7163" orig="I7141"/>
                 <Mapping image="I7165" orig="I7143"/>
                 <Mapping image="I7167" orig="I7145"/>
-                <Mapping image="I7169" orig="I7151"/>
                 <Mapping image="I7170" orig="I7152"/>
+                <Mapping image="I7169" orig="I7151"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
                     <Graph ID="I7175" kind="NAC" name="is_promotion">
                         <Node ID="I7176" type="I60">
-                            <NodeLayout X="175" Y="313"/>
+                            <NodeLayout X="190" Y="49"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7178" type="I2">
-                            <NodeLayout X="65" Y="347"/>
+                            <NodeLayout X="42" Y="58"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -25966,15 +25962,15 @@
             <Parameter name="c" type="boolean"/>
             <Graph ID="I7183" kind="LHS" name="LeftOf_push_en_passant">
                 <Node ID="I7184" type="I68">
-                    <NodeLayout X="107" Y="403"/>
+                    <NodeLayout X="60" Y="326"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7186" type="I74">
-                    <NodeLayout X="183" Y="410"/>
+                    <NodeLayout X="165" Y="329"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7188" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="292" Y="327"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7190" type="I60">
@@ -25983,7 +25979,7 @@
                             <string>c</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="175" Y="313"/>
+                    <NodeLayout X="195" Y="240"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7193" type="I33">
@@ -25997,7 +25993,7 @@
                             <string>r1</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="131" Y="146"/>
+                    <NodeLayout X="57" Y="159"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7197" type="I33">
@@ -26011,7 +26007,7 @@
                             <string>r2</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="221" Y="82"/>
+                    <NodeLayout X="154" Y="88"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7201" type="I33">
@@ -26025,15 +26021,15 @@
                             <string>r1</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="213" Y="154"/>
+                    <NodeLayout X="150" Y="163"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7205" type="I5">
-                    <NodeLayout X="72" Y="200"/>
+                    <NodeLayout X="60" Y="259"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7207" type="I5">
-                    <NodeLayout X="342" Y="159"/>
+                    <NodeLayout X="245" Y="171"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7209" type="I33">
@@ -26042,11 +26038,11 @@
                             <string>f2</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="212" Y="36"/>
+                    <NodeLayout X="150" Y="27"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7212" type="I60">
-                    <NodeLayout X="39" Y="310"/>
+                    <NodeLayout X="276" Y="84"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7214" source="I7184" target="I7186" type="I113">
@@ -26108,43 +26104,43 @@
             </Graph>
             <Graph ID="I7228" kind="RHS" name="RightOf_push_en_passant">
                 <Node ID="I7229" type="I68">
-                    <NodeLayout X="107" Y="403"/>
+                    <NodeLayout X="64" Y="320"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7231" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="253" Y="321"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7233" type="I60">
-                    <NodeLayout X="175" Y="313"/>
+                    <NodeLayout X="170" Y="249"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7235" type="I33">
-                    <NodeLayout X="131" Y="146"/>
+                    <NodeLayout X="86" Y="154"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7237" type="I33">
-                    <NodeLayout X="221" Y="81"/>
+                    <NodeLayout X="160" Y="97"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7239" type="I33">
-                    <NodeLayout X="214" Y="154"/>
+                    <NodeLayout X="154" Y="154"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7241" type="I5">
-                    <NodeLayout X="322" Y="109"/>
+                    <NodeLayout X="69" Y="97"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7243" type="I5">
-                    <NodeLayout X="342" Y="159"/>
+                    <NodeLayout X="339" Y="165"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7245" type="I33">
-                    <NodeLayout X="212" Y="36"/>
+                    <NodeLayout X="167" Y="43"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7247" type="I60">
-                    <NodeLayout X="39" Y="310"/>
+                    <NodeLayout X="295" Y="111"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7249" source="I7233" target="I7237" type="I108">
@@ -26211,15 +26207,15 @@
                 <Mapping image="I7243" orig="I7207"/>
                 <Mapping image="I7245" orig="I7209"/>
                 <Mapping image="I7247" orig="I7212"/>
-                <Mapping image="I7257" orig="I7227"/>
-                <Mapping image="I7256" orig="I7226"/>
-                <Mapping image="I7254" orig="I7224"/>
-                <Mapping image="I7255" orig="I7225"/>
-                <Mapping image="I7250" orig="I7218"/>
-                <Mapping image="I7253" orig="I7222"/>
-                <Mapping image="I7251" orig="I7219"/>
-                <Mapping image="I7249" orig="I7217"/>
                 <Mapping image="I7252" orig="I7221"/>
+                <Mapping image="I7251" orig="I7219"/>
+                <Mapping image="I7255" orig="I7225"/>
+                <Mapping image="I7253" orig="I7222"/>
+                <Mapping image="I7249" orig="I7217"/>
+                <Mapping image="I7256" orig="I7226"/>
+                <Mapping image="I7250" orig="I7218"/>
+                <Mapping image="I7254" orig="I7224"/>
+                <Mapping image="I7257" orig="I7227"/>
             </Morphism>
             <ApplCondition>
                 <AttrCondition>
@@ -26239,19 +26235,19 @@
             <Parameter name="f3" type="int"/>
             <Graph ID="I7265" kind="LHS" name="LeftOf_push_castling">
                 <Node ID="I7266" type="I68">
-                    <NodeLayout X="107" Y="403"/>
+                    <NodeLayout X="65" Y="310"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7268" type="I74">
-                    <NodeLayout X="183" Y="410"/>
+                    <NodeLayout X="192" Y="304"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7270" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="285" Y="311"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7272" type="I60">
-                    <NodeLayout X="168" Y="343"/>
+                    <NodeLayout X="173" Y="190"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7274" type="I33">
@@ -26260,7 +26256,7 @@
                             <int>4</int>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="120" Y="133"/>
+                    <NodeLayout X="110" Y="40"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7277" type="I33">
@@ -26269,7 +26265,7 @@
                             <string>f2</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="309" Y="262"/>
+                    <NodeLayout X="306" Y="159"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7280" type="I33">
@@ -26278,7 +26274,7 @@
                             <string>f3</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="38" Y="272"/>
+                    <NodeLayout X="41" Y="193"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7283" type="I33">
@@ -26287,15 +26283,15 @@
                             <string>f1</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="190" Y="125"/>
+                    <NodeLayout X="246" Y="40"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7286" type="I21">
-                    <NodeLayout X="289" Y="155"/>
+                    <NodeLayout X="294" Y="85"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7288" type="I29">
-                    <NodeLayout X="49" Y="182"/>
+                    <NodeLayout X="58" Y="94"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7290" source="I7266" target="I7268" type="I113">
@@ -26329,39 +26325,39 @@
             </Graph>
             <Graph ID="I7297" kind="RHS" name="RightOf_push_castling">
                 <Node ID="I7298" type="I68">
-                    <NodeLayout X="147" Y="408"/>
+                    <NodeLayout X="80" Y="302"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7300" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="242" Y="303"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7302" type="I60">
-                    <NodeLayout X="177" Y="356"/>
+                    <NodeLayout X="154" Y="155"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7304" type="I33">
-                    <NodeLayout X="117" Y="173"/>
+                    <NodeLayout X="117" Y="58"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7306" type="I33">
-                    <NodeLayout X="311" Y="269"/>
+                    <NodeLayout X="299" Y="216"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7308" type="I33">
-                    <NodeLayout X="67" Y="286"/>
+                    <NodeLayout X="58" Y="223"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7310" type="I33">
-                    <NodeLayout X="191" Y="145"/>
+                    <NodeLayout X="233" Y="50"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7312" type="I21">
-                    <NodeLayout X="309" Y="168"/>
+                    <NodeLayout X="300" Y="128"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7314" type="I29">
-                    <NodeLayout X="36" Y="170"/>
+                    <NodeLayout X="49" Y="116"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7316" source="I7298" target="I7300" type="I113">
@@ -26399,8 +26395,8 @@
                 <Mapping image="I7310" orig="I7283"/>
                 <Mapping image="I7312" orig="I7286"/>
                 <Mapping image="I7314" orig="I7288"/>
-                <Mapping image="I7318" orig="I7296"/>
                 <Mapping image="I7317" orig="I7295"/>
+                <Mapping image="I7318" orig="I7296"/>
             </Morphism>
             <ApplCondition>
                 <AttrCondition>
@@ -26417,35 +26413,35 @@
         <Rule ID="I7323" formula="true" name="push_promotion">
             <Graph ID="I7325" kind="LHS" name="LeftOf_push_promotion">
                 <Node ID="I7326" type="I68">
-                    <NodeLayout X="107" Y="403"/>
+                    <NodeLayout X="40" Y="261"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7328" type="I74">
-                    <NodeLayout X="183" Y="410"/>
+                    <NodeLayout X="134" Y="271"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7330" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="241" Y="273"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7332" type="I60">
-                    <NodeLayout X="175" Y="313"/>
+                    <NodeLayout X="130" Y="161"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7334" type="I2">
-                    <NodeLayout X="136" Y="160"/>
+                    <NodeLayout X="122" Y="49"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7336" type="I33">
-                    <NodeLayout X="82" Y="205"/>
+                    <NodeLayout X="48" Y="100"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7338" type="I33">
-                    <NodeLayout X="220" Y="206"/>
+                    <NodeLayout X="219" Y="105"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7340" type="I2">
-                    <NodeLayout X="282" Y="318"/>
+                    <NodeLayout X="250" Y="179"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7342" source="I7326" target="I7328" type="I113">
@@ -26479,31 +26475,31 @@
             </Graph>
             <Graph ID="I7349" kind="RHS" name="RightOf_push_promotion">
                 <Node ID="I7350" type="I68">
-                    <NodeLayout X="147" Y="408"/>
+                    <NodeLayout X="36" Y="275"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7352" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="184" Y="269"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7354" type="I60">
-                    <NodeLayout X="175" Y="313"/>
+                    <NodeLayout X="117" Y="170"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7356" type="I2">
-                    <NodeLayout X="136" Y="160"/>
+                    <NodeLayout X="115" Y="45"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7358" type="I33">
-                    <NodeLayout X="82" Y="205"/>
+                    <NodeLayout X="40" Y="107"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7360" type="I33">
-                    <NodeLayout X="220" Y="206"/>
+                    <NodeLayout X="204" Y="93"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7362" type="I2">
-                    <NodeLayout X="282" Y="318"/>
+                    <NodeLayout X="241" Y="197"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7364" source="I7356" target="I7354" type="I105">
@@ -26539,20 +26535,20 @@
                 <Mapping image="I7358" orig="I7336"/>
                 <Mapping image="I7360" orig="I7338"/>
                 <Mapping image="I7362" orig="I7340"/>
+                <Mapping image="I7368" orig="I7348"/>
                 <Mapping image="I7364" orig="I7346"/>
                 <Mapping image="I7365" orig="I7347"/>
-                <Mapping image="I7368" orig="I7348"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
                     <Graph ID="I7370" kind="NAC" name="is_capture">
                         <Node ID="I7371" type="I2">
-                            <NodeLayout X="103" Y="215"/>
+                            <NodeLayout X="62" Y="67"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7373" type="I33">
-                            <NodeLayout X="220" Y="206"/>
+                            <NodeLayout X="146" Y="76"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -26573,39 +26569,39 @@
         <Rule ID="I7376" formula="true" name="push_promotion_cap">
             <Graph ID="I7378" kind="LHS" name="LeftOf_push_promotion_cap">
                 <Node ID="I7379" type="I68">
-                    <NodeLayout X="107" Y="403"/>
+                    <NodeLayout X="38" Y="318"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7381" type="I74">
-                    <NodeLayout X="183" Y="410"/>
+                    <NodeLayout X="142" Y="309"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7383" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="249" Y="321"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7385" type="I60">
-                    <NodeLayout X="175" Y="313"/>
+                    <NodeLayout X="124" Y="187"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7387" type="I2">
-                    <NodeLayout X="136" Y="160"/>
+                    <NodeLayout X="135" Y="60"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7389" type="I33">
-                    <NodeLayout X="82" Y="205"/>
+                    <NodeLayout X="44" Y="116"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7391" type="I33">
-                    <NodeLayout X="220" Y="206"/>
+                    <NodeLayout X="213" Y="123"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7393" type="I2">
-                    <NodeLayout X="282" Y="318"/>
+                    <NodeLayout X="256" Y="203"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7395" type="I2">
-                    <NodeLayout X="332" Y="198"/>
+                    <NodeLayout X="281" Y="65"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7397" source="I7379" target="I7381" type="I113">
@@ -26643,35 +26639,35 @@
             </Graph>
             <Graph ID="I7405" kind="RHS" name="RightOf_push_promotion_cap">
                 <Node ID="I7406" type="I68">
-                    <NodeLayout X="147" Y="408"/>
+                    <NodeLayout X="56" Y="317"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7408" type="I78">
-                    <NodeLayout X="284" Y="410"/>
+                    <NodeLayout X="199" Y="313"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7410" type="I60">
-                    <NodeLayout X="175" Y="313"/>
+                    <NodeLayout X="108" Y="219"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7412" type="I2">
-                    <NodeLayout X="136" Y="160"/>
+                    <NodeLayout X="98" Y="49"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7414" type="I33">
-                    <NodeLayout X="82" Y="205"/>
+                    <NodeLayout X="40" Y="118"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7416" type="I33">
-                    <NodeLayout X="220" Y="206"/>
+                    <NodeLayout X="223" Y="126"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7418" type="I2">
-                    <NodeLayout X="282" Y="318"/>
+                    <NodeLayout X="312" Y="243"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7420" type="I2">
-                    <NodeLayout X="332" Y="198"/>
+                    <NodeLayout X="233" Y="52"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7422" source="I7412" target="I7410" type="I105">
@@ -26712,9 +26708,9 @@
                 <Mapping image="I7416" orig="I7391"/>
                 <Mapping image="I7418" orig="I7393"/>
                 <Mapping image="I7420" orig="I7395"/>
-                <Mapping image="I7426" orig="I7403"/>
-                <Mapping image="I7423" orig="I7402"/>
                 <Mapping image="I7422" orig="I7401"/>
+                <Mapping image="I7423" orig="I7402"/>
+                <Mapping image="I7426" orig="I7403"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="1"/>
@@ -26723,31 +26719,31 @@
             <Parameter name="r" type="int"/>
             <Graph ID="I7431" kind="LHS" name="LeftOf_pop_move">
                 <Node ID="I7432" type="I75">
-                    <NodeLayout X="199" Y="469"/>
+                    <NodeLayout X="145" Y="263"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7434" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="264" Y="266"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7436" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="44" Y="268"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7438" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="142" Y="172"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7440" type="I33">
-                    <NodeLayout X="191" Y="207"/>
+                    <NodeLayout X="217" Y="114"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7442" type="I33">
-                    <NodeLayout X="75" Y="218"/>
+                    <NodeLayout X="59" Y="117"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7444" type="I2">
-                    <NodeLayout X="273" Y="120"/>
+                    <NodeLayout X="136" Y="52"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7446" source="I7436" target="I7432" type="I113">
@@ -26781,27 +26777,27 @@
             </Graph>
             <Graph ID="I7453" kind="RHS" name="RightOf_pop_move">
                 <Node ID="I7454" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="214" Y="294"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7456" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="57" Y="284"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7458" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="141" Y="205"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7460" type="I33">
-                    <NodeLayout X="191" Y="207"/>
+                    <NodeLayout X="237" Y="133"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7462" type="I33">
-                    <NodeLayout X="75" Y="218"/>
+                    <NodeLayout X="46" Y="137"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7464" type="I2">
-                    <NodeLayout X="273" Y="120"/>
+                    <NodeLayout X="140" Y="59"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7466" source="I7458" target="I7460" type="I108">
@@ -26828,8 +26824,8 @@
                 <Mapping image="I7460" orig="I7440"/>
                 <Mapping image="I7462" orig="I7442"/>
                 <Mapping image="I7464" orig="I7444"/>
-                <Mapping image="I7467" orig="I7452"/>
                 <Mapping image="I7466" orig="I7450"/>
+                <Mapping image="I7467" orig="I7452"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -26857,7 +26853,7 @@
                 <NAC>
                     <Graph ID="I7476" kind="NAC" name="is_castling">
                         <Node ID="I7477" type="I29">
-                            <NodeLayout X="141" Y="175"/>
+                            <NodeLayout X="124" Y="65"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -26867,7 +26863,7 @@
                                     <string>r</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="191" Y="207"/>
+                            <NodeLayout X="225" Y="128"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -26877,7 +26873,7 @@
                                     <string>r</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="75" Y="218"/>
+                            <NodeLayout X="41" Y="129"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -26887,7 +26883,7 @@
                                     <string>r</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="121" Y="254"/>
+                            <NodeLayout X="143" Y="129"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -26916,35 +26912,35 @@
             <Parameter name="r" type="int"/>
             <Graph ID="I7492" kind="LHS" name="LeftOf_pop_capture">
                 <Node ID="I7493" type="I75">
-                    <NodeLayout X="199" Y="469"/>
+                    <NodeLayout X="126" Y="271"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7495" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="220" Y="286"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7497" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="33" Y="269"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7499" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="90" Y="170"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7501" type="I33">
-                    <NodeLayout X="191" Y="207"/>
+                    <NodeLayout X="149" Y="83"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7503" type="I33">
-                    <NodeLayout X="75" Y="218"/>
+                    <NodeLayout X="43" Y="80"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7505" type="I2">
-                    <NodeLayout X="273" Y="120"/>
+                    <NodeLayout X="100" Y="31"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7507" type="I2">
-                    <NodeLayout X="338" Y="246"/>
+                    <NodeLayout X="208" Y="173"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7509" source="I7497" target="I7493" type="I113">
@@ -26982,31 +26978,31 @@
             </Graph>
             <Graph ID="I7517" kind="RHS" name="RightOf_pop_capture">
                 <Node ID="I7518" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="194" Y="267"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7520" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="52" Y="265"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7522" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="114" Y="166"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7524" type="I33">
-                    <NodeLayout X="191" Y="207"/>
+                    <NodeLayout X="193" Y="101"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7526" type="I33">
-                    <NodeLayout X="75" Y="218"/>
+                    <NodeLayout X="37" Y="104"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7528" type="I2">
-                    <NodeLayout X="273" Y="120"/>
+                    <NodeLayout X="91" Y="30"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7530" type="I2">
-                    <NodeLayout X="338" Y="246"/>
+                    <NodeLayout X="291" Y="128"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7532" source="I7522" target="I7524" type="I108">
@@ -27038,24 +27034,24 @@
                 <Mapping image="I7526" orig="I7503"/>
                 <Mapping image="I7528" orig="I7505"/>
                 <Mapping image="I7530" orig="I7507"/>
-                <Mapping image="I7533" orig="I7515"/>
                 <Mapping image="I7532" orig="I7513"/>
+                <Mapping image="I7533" orig="I7515"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
                     <Graph ID="I7537" kind="NAC" name="is_en_passant">
                         <Node ID="I7538" type="I60">
-                            <NodeLayout X="181" Y="340"/>
+                            <NodeLayout X="210" Y="200"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7540" type="I5">
-                            <NodeLayout X="46" Y="276"/>
+                            <NodeLayout X="84" Y="224"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7542" type="I33">
-                            <NodeLayout X="75" Y="218"/>
+                            <NodeLayout X="52" Y="138"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -27065,7 +27061,7 @@
                                     <string>r</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="191" Y="207"/>
+                            <NodeLayout X="123" Y="85"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -27075,7 +27071,7 @@
                                     <string>r</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="195" Y="241"/>
+                            <NodeLayout X="122" Y="139"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -27085,12 +27081,12 @@
                                     <string>r</string>
                                 </Value>
                             </Attribute>
-                            <NodeLayout X="188" Y="149"/>
+                            <NodeLayout X="124" Y="36"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7553" type="I60">
-                            <NodeLayout X="55" Y="348"/>
+                            <NodeLayout X="206" Y="100"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -27145,19 +27141,19 @@
             <Parameter name="r" type="int"/>
             <Graph ID="I7564" kind="LHS" name="LeftOf_pop_en_passant">
                 <Node ID="I7565" type="I75">
-                    <NodeLayout X="199" Y="469"/>
+                    <NodeLayout X="135" Y="323"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7567" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="255" Y="314"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7569" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="41" Y="326"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7571" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="186" Y="241"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7573" type="I33">
@@ -27166,11 +27162,11 @@
                             <string>r</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="192" Y="143"/>
+                    <NodeLayout X="122" Y="100"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7576" type="I33">
-                    <NodeLayout X="75" Y="218"/>
+                    <NodeLayout X="36" Y="166"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7578" type="I33">
@@ -27179,7 +27175,7 @@
                             <string>r</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="165" Y="215"/>
+                    <NodeLayout X="122" Y="170"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7581" type="I33">
@@ -27188,19 +27184,19 @@
                             <string>r</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="210" Y="79"/>
+                    <NodeLayout X="121" Y="27"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7584" type="I60">
-                    <NodeLayout X="49" Y="340"/>
+                    <NodeLayout X="217" Y="98"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7586" type="I5">
-                    <NodeLayout X="284" Y="158"/>
+                    <NodeLayout X="32" Y="99"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7588" type="I5">
-                    <NodeLayout X="290" Y="248"/>
+                    <NodeLayout X="283" Y="188"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7590" source="I7569" target="I7565" type="I113">
@@ -27266,39 +27262,39 @@
             </Graph>
             <Graph ID="I7605" kind="RHS" name="RightOf_pop_en_passant">
                 <Node ID="I7606" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="216" Y="357"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7608" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="67" Y="348"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7610" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="138" Y="263"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7612" type="I33">
-                    <NodeLayout X="192" Y="143"/>
+                    <NodeLayout X="151" Y="116"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7614" type="I33">
-                    <NodeLayout X="75" Y="218"/>
+                    <NodeLayout X="55" Y="202"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7616" type="I33">
-                    <NodeLayout X="165" Y="215"/>
+                    <NodeLayout X="161" Y="195"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7618" type="I33">
-                    <NodeLayout X="210" Y="79"/>
+                    <NodeLayout X="152" Y="42"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7620" type="I60">
-                    <NodeLayout X="49" Y="340"/>
+                    <NodeLayout X="251" Y="126"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7622" type="I5">
-                    <NodeLayout X="29" Y="161"/>
+                    <NodeLayout X="42" Y="129"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7624" type="I5">
@@ -27338,7 +27334,7 @@
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
                 <Edge ID="I7634" source="I7622" target="I7610" type="I105">
-                    <EdgeLayout bendX="124" bendY="249" textOffsetX="0" textOffsetY="-22"/>
+                    <EdgeLayout bendX="0" bendY="0" textOffsetX="0" textOffsetY="-22"/>
                     <additionalLayout aktlength="200" force="10" preflength="200"/>
                 </Edge>
                 <Edge ID="I7635" source="I7622" target="I7614" type="I102">
@@ -27365,14 +27361,14 @@
                 <Mapping image="I7620" orig="I7584"/>
                 <Mapping image="I7622" orig="I7586"/>
                 <Mapping image="I7624" orig="I7588"/>
+                <Mapping image="I7629" orig="I7597"/>
+                <Mapping image="I7631" orig="I7599"/>
+                <Mapping image="I7626" orig="I7594"/>
+                <Mapping image="I7633" orig="I7602"/>
+                <Mapping image="I7627" orig="I7595"/>
+                <Mapping image="I7628" orig="I7596"/>
                 <Mapping image="I7634" orig="I7603"/>
                 <Mapping image="I7630" orig="I7598"/>
-                <Mapping image="I7629" orig="I7597"/>
-                <Mapping image="I7626" orig="I7594"/>
-                <Mapping image="I7628" orig="I7596"/>
-                <Mapping image="I7633" orig="I7602"/>
-                <Mapping image="I7631" orig="I7599"/>
-                <Mapping image="I7627" orig="I7595"/>
                 <Mapping image="I7632" orig="I7600"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="3"/>
@@ -27385,19 +27381,19 @@
             <Parameter name="f3" type="int"/>
             <Graph ID="I7640" kind="LHS" name="LeftOf_pop_castling">
                 <Node ID="I7641" type="I75">
-                    <NodeLayout X="199" Y="469"/>
+                    <NodeLayout X="184" Y="376"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7643" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="286" Y="369"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7645" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="69" Y="371"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7647" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="180" Y="199"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7649" type="I33">
@@ -27411,7 +27407,7 @@
                             <string>r</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="127" Y="70"/>
+                    <NodeLayout X="127" Y="55"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7653" type="I33">
@@ -27425,7 +27421,7 @@
                             <string>r</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="54" Y="279"/>
+                    <NodeLayout X="47" Y="225"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7657" type="I33">
@@ -27439,7 +27435,7 @@
                             <string>r</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="377" Y="78"/>
+                    <NodeLayout X="277" Y="49"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7661" type="I33">
@@ -27453,15 +27449,15 @@
                             <string>r</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="382" Y="293"/>
+                    <NodeLayout X="294" Y="225"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7665" type="I29">
-                    <NodeLayout X="76" Y="160"/>
+                    <NodeLayout X="38" Y="133"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7667" type="I21">
-                    <NodeLayout X="447" Y="189"/>
+                    <NodeLayout X="381" Y="132"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7669" source="I7645" target="I7641" type="I113">
@@ -27499,15 +27495,15 @@
             </Graph>
             <Graph ID="I7677" kind="RHS" name="RightOf_pop_castling">
                 <Node ID="I7678" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="269" Y="353"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7680" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="85" Y="360"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7682" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="176" Y="149"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7684" type="I33">
@@ -27515,23 +27511,23 @@
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7686" type="I33">
-                    <NodeLayout X="72" Y="258"/>
+                    <NodeLayout X="52" Y="207"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7688" type="I33">
-                    <NodeLayout X="264" Y="72"/>
+                    <NodeLayout X="247" Y="64"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7690" type="I33">
-                    <NodeLayout X="315" Y="254"/>
+                    <NodeLayout X="302" Y="211"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7692" type="I29">
-                    <NodeLayout X="76" Y="160"/>
+                    <NodeLayout X="68" Y="123"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7694" type="I21">
-                    <NodeLayout X="290" Y="165"/>
+                    <NodeLayout X="281" Y="132"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7696" source="I7682" target="I7684" type="I108">
@@ -27582,35 +27578,35 @@
         <Rule ID="I7702" formula="true" name="pop_promotion">
             <Graph ID="I7704" kind="LHS" name="LeftOf_pop_promotion">
                 <Node ID="I7705" type="I75">
-                    <NodeLayout X="199" Y="469"/>
+                    <NodeLayout X="135" Y="329"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7707" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="258" Y="333"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7709" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="40" Y="330"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7711" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="132" Y="195"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7713" type="I33">
-                    <NodeLayout X="191" Y="207"/>
+                    <NodeLayout X="233" Y="111"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7715" type="I33">
-                    <NodeLayout X="75" Y="218"/>
+                    <NodeLayout X="54" Y="76"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7717" type="I2">
-                    <NodeLayout X="273" Y="120"/>
+                    <NodeLayout X="155" Y="35"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7719" type="I2">
-                    <NodeLayout X="293" Y="308"/>
+                    <NodeLayout X="278" Y="190"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7721" source="I7709" target="I7705" type="I113">
@@ -27648,31 +27644,31 @@
             </Graph>
             <Graph ID="I7729" kind="RHS" name="RightOf_pop_promotion">
                 <Node ID="I7730" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="222" Y="354"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7732" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="45" Y="349"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7734" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="135" Y="221"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7736" type="I33">
-                    <NodeLayout X="210" Y="163"/>
+                    <NodeLayout X="249" Y="103"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7738" type="I33">
-                    <NodeLayout X="75" Y="218"/>
+                    <NodeLayout X="46" Y="124"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7740" type="I2">
-                    <NodeLayout X="334" Y="332"/>
+                    <NodeLayout X="139" Y="51"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7742" type="I2">
-                    <NodeLayout X="117" Y="172"/>
+                    <NodeLayout X="301" Y="214"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7744" source="I7734" target="I7736" type="I108">
@@ -27705,19 +27701,19 @@
                 <Mapping image="I7740" orig="I7717"/>
                 <Mapping image="I7742" orig="I7719"/>
                 <Mapping image="I7746" orig="I7727"/>
-                <Mapping image="I7745" orig="I7728"/>
                 <Mapping image="I7744" orig="I7725"/>
+                <Mapping image="I7745" orig="I7728"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
                     <Graph ID="I7749" kind="NAC" name="is_capture">
                         <Node ID="I7750" type="I60">
-                            <NodeLayout X="181" Y="340"/>
+                            <NodeLayout X="60" Y="76"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I7752" type="I2">
-                            <NodeLayout X="186" Y="267"/>
+                            <NodeLayout X="64" Y="142"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -27738,39 +27734,39 @@
         <Rule ID="I7755" formula="true" name="pop_promotion_cap">
             <Graph ID="I7757" kind="LHS" name="LeftOf_pop_promotion_cap">
                 <Node ID="I7758" type="I75">
-                    <NodeLayout X="199" Y="469"/>
+                    <NodeLayout X="152" Y="322"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7760" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="258" Y="320"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7762" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="42" Y="336"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7764" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="148" Y="182"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7766" type="I33">
-                    <NodeLayout X="191" Y="207"/>
+                    <NodeLayout X="222" Y="90"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7768" type="I33">
-                    <NodeLayout X="75" Y="218"/>
+                    <NodeLayout X="58" Y="109"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7770" type="I2">
-                    <NodeLayout X="273" Y="120"/>
+                    <NodeLayout X="129" Y="46"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7772" type="I2">
-                    <NodeLayout X="293" Y="308"/>
+                    <NodeLayout X="263" Y="181"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7774" type="I2">
-                    <NodeLayout X="54" Y="355"/>
+                    <NodeLayout X="38" Y="217"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7776" source="I7762" target="I7758" type="I113">
@@ -27812,35 +27808,35 @@
             </Graph>
             <Graph ID="I7785" kind="RHS" name="RightOf_pop_promotion_cap">
                 <Node ID="I7786" type="I78">
-                    <NodeLayout X="287" Y="461"/>
+                    <NodeLayout X="192" Y="306"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7788" type="I68">
-                    <NodeLayout X="114" Y="474"/>
+                    <NodeLayout X="55" Y="318"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7790" type="I60">
-                    <NodeLayout X="181" Y="340"/>
+                    <NodeLayout X="132" Y="205"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7792" type="I33">
-                    <NodeLayout X="210" Y="163"/>
+                    <NodeLayout X="226" Y="93"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7794" type="I33">
-                    <NodeLayout X="75" Y="218"/>
+                    <NodeLayout X="41" Y="97"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7796" type="I2">
-                    <NodeLayout X="334" Y="332"/>
+                    <NodeLayout X="124" Y="39"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7798" type="I2">
-                    <NodeLayout X="117" Y="172"/>
+                    <NodeLayout X="280" Y="182"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I7800" type="I2">
-                    <NodeLayout X="54" Y="355"/>
+                    <NodeLayout X="37" Y="180"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I7802" source="I7790" target="I7792" type="I108">
@@ -27877,9 +27873,9 @@
                 <Mapping image="I7796" orig="I7770"/>
                 <Mapping image="I7798" orig="I7772"/>
                 <Mapping image="I7800" orig="I7774"/>
-                <Mapping image="I7802" orig="I7780"/>
                 <Mapping image="I7804" orig="I7782"/>
                 <Mapping image="I7803" orig="I7783"/>
+                <Mapping image="I7802" orig="I7780"/>
             </Morphism>
             <TaggedValue Tag="layer" TagValue="3"/>
             <TaggedValue Tag="priority" TagValue="1"/>
@@ -28025,9 +28021,9 @@
                 <Mapping image="I7840" orig="I7817"/>
                 <Mapping image="I7842" orig="I7821"/>
                 <Mapping image="I7844" orig="I7825"/>
-                <Mapping image="I7846" orig="I7830"/>
-                <Mapping image="I7847" orig="I7829"/>
                 <Mapping image="I7848" orig="I7828"/>
+                <Mapping image="I7847" orig="I7829"/>
+                <Mapping image="I7846" orig="I7830"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -28210,8 +28206,8 @@
                 <Mapping image="I7892" orig="I7870"/>
                 <Mapping image="I7894" orig="I7874"/>
                 <Mapping image="I7897" orig="I7877"/>
-                <Mapping image="I7896" orig="I7878"/>
                 <Mapping image="I7898" orig="I7879"/>
+                <Mapping image="I7896" orig="I7878"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -28761,9 +28757,9 @@
                 <Mapping image="I8040" orig="I8016"/>
                 <Mapping image="I8042" orig="I8020"/>
                 <Mapping image="I8044" orig="I8024"/>
-                <Mapping image="I8048" orig="I8029"/>
                 <Mapping image="I8047" orig="I8027"/>
                 <Mapping image="I8046" orig="I8028"/>
+                <Mapping image="I8048" orig="I8029"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -28823,15 +28819,15 @@
                             <string>eg_black</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="236" Y="244"/>
+                    <NodeLayout X="161" Y="206"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I8065" type="I68">
-                    <NodeLayout X="71" Y="244"/>
+                    <NodeLayout X="54" Y="215"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I8067" type="I78">
-                    <NodeLayout X="374" Y="242"/>
+                    <NodeLayout X="266" Y="195"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I8069" type="I33">
@@ -28845,7 +28841,7 @@
                             <string>r</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="209" Y="122"/>
+                    <NodeLayout X="105" Y="81"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I8073" type="I29">
@@ -28854,7 +28850,7 @@
                             <string>c</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="337" Y="90"/>
+                    <NodeLayout X="232" Y="79"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I8076" source="I8065" target="I8059" type="I113">
@@ -28872,7 +28868,7 @@
             </Graph>
             <Graph ID="I8079" kind="RHS" name="RightOf_eval_king">
                 <Node ID="I8080" type="I78">
-                    <NodeLayout X="374" Y="242"/>
+                    <NodeLayout X="300" Y="210"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I8082" type="I87">
@@ -28896,19 +28892,19 @@
                             <string>eg_black+(c?0:7-file&lt;4?(7-file&lt;2?(7-file==0?(r&lt;4?(r&lt;2?(r==0?-53:-34):(r==2?-21:-11)):(r&lt;6?(r==4?-28:-14):(r==6?-24:-43))):(r&lt;4?(r&lt;2?(r==0?-27:-11):(r==2?4:13)):(r&lt;6?(r==4?14:4):(r==6?-5:-17)))):(7-file==2?(r&lt;4?(r&lt;2?(r==0?-19:-3):(r==2?11:21)):(r&lt;6?(r==4?23:16):(r==6?7:-9))):(r&lt;4?(r&lt;2?(r==0?-18:-4):(r==2?21:24)):(r&lt;6?(r==4?27:23):(r==6?9:-11))))):(7-file&lt;6?(7-file==4?(r&lt;4?(r&lt;2?(r==0?-8:22):(r==2?24:27)):(r&lt;6?(r==4?26:33):(r==6?26:3))):(r&lt;4?(r&lt;2?(r==0?10:17):(r==2?23:15)):(r&lt;6?(r==4?20:45):(r==6?44:13)))):(7-file==6?(r&lt;4?(r&lt;2?(r==0?-12:17):(r==2?14:17)):(r&lt;6?(r==4?17:38):(r==6?23:11))):(r&lt;4?(r&lt;2?(r==0?-74:-35):(r==2?-18:-18)):(r&lt;6?(r==4?-11:15):(r==6?4:-17))))))</string>
                         </Value>
                     </Attribute>
-                    <NodeLayout X="235" Y="244"/>
+                    <NodeLayout X="179" Y="210"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I8088" type="I68">
-                    <NodeLayout X="71" Y="244"/>
+                    <NodeLayout X="52" Y="211"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I8090" type="I33">
-                    <NodeLayout X="209" Y="122"/>
+                    <NodeLayout X="112" Y="85"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Node ID="I8092" type="I29">
-                    <NodeLayout X="337" Y="90"/>
+                    <NodeLayout X="226" Y="89"/>
                     <additionalLayout age="0" force="10" frozen="true" zone="50"/>
                 </Node>
                 <Edge ID="I8094" source="I8082" target="I8080" type="I113">
@@ -28934,20 +28930,20 @@
                 <Mapping image="I8088" orig="I8065"/>
                 <Mapping image="I8090" orig="I8069"/>
                 <Mapping image="I8092" orig="I8073"/>
+                <Mapping image="I8094" orig="I8077"/>
                 <Mapping image="I8095" orig="I8076"/>
                 <Mapping image="I8096" orig="I8078"/>
-                <Mapping image="I8094" orig="I8077"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
                     <Graph ID="I8098" kind="NAC" name="already_evaluated">
                         <Node ID="I8099" type="I87">
-                            <NodeLayout X="207" Y="92"/>
+                            <NodeLayout X="140" Y="59"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
                         <Node ID="I8101" type="I29">
-                            <NodeLayout X="118" Y="71"/>
+                            <NodeLayout X="51" Y="54"/>
                             <additionalLayout age="0" force="10"
                                 frozen="true" zone="50"/>
                         </Node>
@@ -29415,9 +29411,9 @@
                 <Mapping image="I8238" orig="I8219"/>
                 <Mapping image="I8241" orig="I8225"/>
                 <Mapping image="I8243" orig="I8223"/>
-                <Mapping image="I8246" orig="I8229"/>
-                <Mapping image="I8249" orig="I8232"/>
                 <Mapping image="I8247" orig="I8231"/>
+                <Mapping image="I8249" orig="I8232"/>
+                <Mapping image="I8246" orig="I8229"/>
             </Morphism>
             <ApplCondition>
                 <NAC>
@@ -29593,9 +29589,9 @@
                 <Mapping image="I8292" orig="I8273"/>
                 <Mapping image="I8294" orig="I8275"/>
                 <Mapping image="I8296" orig="I8271"/>
-                <Mapping image="I8299" orig="I8279"/>
-                <Mapping image="I8300" orig="I8281"/>
                 <Mapping image="I8302" orig="I8282"/>
+                <Mapping image="I8300" orig="I8281"/>
+                <Mapping image="I8299" orig="I8279"/>
             </Morphism>
             <ApplCondition>
                 <AttrCondition>
