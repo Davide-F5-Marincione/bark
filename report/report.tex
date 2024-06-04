@@ -35,6 +35,11 @@
 \newcommand{\adj}{\edgerepr{adj}}
 \newcommand{\partof}{\edgerepr{part\_of}}
 \newcommand{\at}{\edgerepr{at}}
+\newcommand{\stateptr}{\edgerepr{state\_ptr}}
+\newcommand{\nextguard}{\edgerepr{next\_guard}}
+\newcommand{\nextstate}{\edgerepr{next\_state}}
+\newcommand{\mover}{\edgerepr{mover}}
+\newcommand{\tosquare}{\edgerepr{to}}
 
 \title{Bark: An Attributed Graph Grammar Chess Engine}
 \author{Davide Marincione}
@@ -59,7 +64,7 @@
     \end{figure}
 
     \paragraph{Construction by rules} We could have set up the board by hand (as we actually do to position the pieces and starting the game), but that would have been quite tedious because of the multiple edges needed to make it complete. Instead, we use a set of rules to produce it, which are as follows:
-    \begin{itemize}
+    \begin{enumerate}
         \item \texttt{produce\_first\_square} creates a first square of the board (the white top left square, \texttt{file=0} and \texttt{rank=7}), if it has not been created yet. This is then used as a seed for the rest of the construction.
         \begin{figure}[H]
             \centering
@@ -80,9 +85,10 @@
             \includegraphics[width=.8\linewidth]{images/produce_first_file.png}
             \caption{\texttt{produce\_first\_file}}
         \end{figure}
-    \end{itemize}
+    \end{enumerate}
     These first rules create the top rank and the left file of the board. The rest of the board is then created by applying:
-    \begin{itemize}
+    \begin{enumerate}
+        \setcounter{enumi}{3}
         \item \texttt{produce\_square\_b/w} creates a black or white square, if it has not been created yet.
         \begin{figure}[H]
             \centering
@@ -103,7 +109,7 @@
             \includegraphics[width=.8\linewidth]{images/produce_right_group.png}
             \caption{\texttt{produce\_right\_group}}
         \end{figure}
-    \end{itemize}
+    \end{enumerate}
     These rules are then applied in a loop until the board is complete.
     Of course, this is just a \emph{topological} description of the board, and, indeed, applying these rules doesn't result in a good-looking graph.
     \begin{figure}[H]
@@ -120,38 +126,123 @@
 
     \section{Representing game states and enabling complex behaviors}
     Pieces are represented as nodes connected (via an \at) to the squares they are on. With a boolean \texttt{color} attribute (\texttt{false} for black pieces and \texttt{true} for white ones), \piece\ is the parent class, which is inherited by the \pawn, \knight, \bishoplike, \rooklike, and \king\ nodes. Specifically, the \bishoplike\ and \rooklike\ nodes are further inherited by \bishop, \rook, and \queen\ nodes, the latter of which is the only example of multiple inheritance in the system (as it moves like a rook and a bishop).
-    A game state is not only composed by the pieces' positions on the board, but also by the information about the current rights to move, the castling rights, the last move, and the move counters. This information is stored, explicitly via attributes and implicitly via edges, in the \gamestate.
+    A game state is not only composed by the pieces' positions on the board, but also by the information about the current rights to move, the castling rights, the last move, and the move counter (ply). This information is stored, explicitly via attributes and implicitly via edges, in the \gamestate.
 
-    \paragraph*{Not only structure} Until now, we've only focused on defining a representation for the game, without including a description for its behavior. Graph rewriting mechanisms by themselves are enough to define a description for the rules of a game such as chess. But, to simplify the design of complex algorithms, we define another set of nodes all inheriting from \guard. These compose a stack of operations which are used to enable only a subset of the rules at a time. Thanks to these, we were able to define the generation of moves, the evaluation of the board, the exploration of the game tree, and more.
+    \paragraph*{Not only structure} Until now, we've only focused on defining a representation for the game, without including a description for its behavior. Graph rewriting mechanisms by themselves are enough to define a description for the rules of a game such as chess. But, to simplify the design of complex algorithms, we define another set of nodes all inheriting from \guard. These compose a stack (through the use of \nextguard) of operations which are used to enable only a subset of the rules at a time. Thanks to these, we were able to define the generation of moves, the evaluation of the board, the exploration of the game tree, and more.
     \begin{figure}[H]
         \centering
         \includegraphics[width=.8\linewidth]{images/base_state.png}
         \caption{The starting configuration of the board.}
     \end{figure}
     Out of these \guard\ nodes, there are three that are designed for the control of the stack itself:
-    \begin{itemize}
+    \begin{enumerate}
         \item \gameinfo\ acts both as the start of the stack and as a container for the game information (which player is human and the depth of the search).
         \item \void\ has a usage akin to a "no-op" operation, as it is used to block all rules until it is removed.
         \item \stackend\ is the end of the stack, and it is used to signal which guard is at the top of the stack.
-    \end{itemize}
+    \end{enumerate}
+    All guards can have a \stateptr\ which connects them to a \gamestate.
 
-    \section{Generating moves and exploration operations}
+    \section{Generating moves}
     \paragraph*{How it is done} As cited previously, in a traditional chess engine a lot of computations are done via "magic bitboards". These are perfect hashing algorithms which can trivialize a lot of checks, even the generation of movements. Without getting into the details, the moves are produced in a two-phase manner:
     \begin{enumerate}
         \item The result of every possible move is generated (via magic bitboards), without any forward checking (e.g. leaving the king in check), as that is usually too complex and slow to implement. The resulting set is called "pseudo-legal moves".
         \item For every possible resulting board, the king is checked for being in check. If it is, the move is discarded. This filtered set is called "legal moves".
     \end{enumerate}
-    \paragraph*{How Bark does it} Bark, of course, cannot use magic bitboards. To produce a move, we first design the \produce\ guard, which is checked upon by all the \texttt{move\_*} and \texttt{capture\_*} rules. These rules are then used to generate the pseudo-legal moves, which are:
+    A further information to keep into account is that a chess engine usually enables "push" and "pop" operation on moves (i.e. to make a move and then undo it). This is done by keeping a stack of the boards, and pushing a new configuration every time a move is made. This is a very efficient way to implement the "undo" functionality, as it doesn't require to recompute the whole board every time. Furthermore, it is also used to implement the exploration of the game tree, as it allows backtracking to the previous state of the game.
+    \paragraph*{How Bark does it} Bark, of course, cannot use magic bitboards. To produce a move, we have the \produce\ guard, which is "checked" upon by all the \texttt{move\_*} and \texttt{capture\_*} rules.
+    Our method to generate moves is akin to the traditional one, but since we can afford to hold only a single board instance, it is more complex (and slow). We represent the game tree by connecting the \gamestate\ nodes: when pushing and popping the moves, instead of retrieving a stored configuration, we use the information present on the \gamestate\ to execute or revert the move by operating on the board instance.
+    To implement push, pop and threat check operations we design multiple rules and their respective guards (\push, \pop, and \threatcheck), which we'll describe in further sections.
+
+    To avoid repetitions, we first describe the patterns common to most (if not all) the \texttt{move\_*} and \texttt{capture\_*} rules:
     \begin{itemize}
-        \item \texttt{move\_knight} ao.
+        \item All rules produce a new \gamestate\ node, which is connected to the current one via a \nextstate\ edge. The moved piece gets a \mover\ connecting it to the new state, and the new state gets connected to the arriving square through a \tosquare\ edge. All but a couple rules append \pop, \threatcheck, and \push\ (which we define in the next section) to the stack.
+        For the sake of the \threatcheck, moves will require the king of the moving color, to pass its position to \threatcheck.
+        \item All rules have a NAC \texttt{already\_added} to ensure that the rule has not been applied yet.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.5\linewidth]{images/already_added_move.png}
+            \caption{The \texttt{already\_added} NAC of the \texttt{move\_knight} rule.}
+        \end{figure}
     \end{itemize}
-
-
-
-    % A further information to keep into account is that a chess engine usually enables "push" and "pop" operation on moves (i.e. to make a move and then undo it). This is done by keeping a stack of the boards, and pushing a new configuration every time a move is made. This is a very efficient way to implement the "undo" functionality, as it doesn't require to recompute the whole board every time. Furthermore, it is also used to implement the exploration of the game tree, as it allows backtracking to the previous state of the game.
-
-    % \paragraph*{How Bark does it, at large} Bark, however, cannot use magic bitboards and, furthermore, can't afford to store a tree of board representations, as a single configuration spans many nodes and edges! We devise another system that, while extremely slower, is able to run on AGG.\\ We maintain a single board instance, which represents the state that the system is currently handling (be it the current game state or a further state being pondered upon by the engine), and represent the game tree by connecting the \gamestate\ nodes: when pushing and popping the moves, instead of retrieving a stored configuration, we use the information present on the \gamestate\ to execute or revert the move by operating on the board instance.
-    % To implement push, pop and threat check operations we design multiple rules and their respective guards (\push, \pop, and \threatcheck), which we describe.
-    
+    The rules are:
+    \begin{enumerate}
+        \item \texttt{move\_pawn} applies only when the next square is empty (\texttt{no\_blocker} NAC) and the pawn is moving forward (\texttt{r2==r1+(c?1:-1)}). It also checks that the move will not lead to a promotion (\texttt{r1!=(c?6:1)}), as it is handled by another rule.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/move_pawn.png}
+            \caption{\texttt{move\_pawn}}
+        \end{figure}
+        \item \texttt{move\_pawn\_promotion\_white/black} apply like the \texttt{move\_pawn} rule, but only when the move leads to a promotion (i.e. the rank reached is either 7 or 0, based on moving color). These are among the only rules that don't append \pop, \threatcheck, and \push\ to the stack, but make a more complex update to it (as each possible promotion is a different move).
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/move_pawn_promotion_white.png}
+            \caption{\texttt{move\_pawn\_promotion\_white}}
+        \end{figure}
+        \item \texttt{move\_pawn\_double} applies only when both next squares are empty (\texttt{no\_blocker} and \texttt{no\_middle\_blocker} NAC) and the pawn is moving forward (\texttt{r2==r1+(c?2:-2)}). It also checks that this is done only when it is the first move of the piece (\texttt{r1==(c?1:6)}).
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/move_pawn_double.png}
+            \caption{\texttt{move\_pawn\_double}}
+        \end{figure}
+        \item \texttt{capture\_pawn} applies only when the next square contains a foe or an en passant is possible (\texttt{normal\_capture | en\_passant} GAC) and the pawn is moving forward (\texttt{r2==r1+(c?1:-1)}). It also checks that the move will not lead to a promotion (\texttt{r1!=(c?6:1)}), as it is handled by another rule.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/capture_pawn.png}
+            \caption{\texttt{capture\_pawn}}
+        \end{figure}
+        \item \texttt{capture\_pawn\_promotion\_white/black} apply like the \texttt{capture\_pawn} rule, but only when the move leads to a promotion (i.e. the rank reached is either 7 or 0, based on moving color). Again, these are among the only rules that make a more complex update to the stack (as each possible promotion is a different move). Unlike the normal \texttt{capture\_pawn} rule, there is no need to check for en passant, as it is impossible when a promotion is happening.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/capture_pawn_promotion_white.png}
+            \caption{\texttt{capture\_pawn\_promotion\_white}}
+        \end{figure}
+        \item \texttt{move\_knight} applies both to normal moves and captures (indeed, there doesn't exist a \texttt{capture\_knight}). To ensure that the piece can only move to an empty square or over a foe, a \texttt{no\_blocker} NAC is added.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/move_knight.png}
+            \caption{\texttt{move\_knight}}
+        \end{figure}
+        \item \texttt{move\_bishop\_like} applies both to normal moves and captures, to both bishops and queens. To ensure that the piece can only move to an empty square or over a foe, a \texttt{no\_blocker} NAC is added. Furthermore, to ensure that there is no piece in between the starting and arriving squares, a \texttt{no\_middle\_blocker} NAC is added; this is possible only when the piece is in the same \bishopgroupnode, and it abides
+        \begin{equation}\label{eq:slidegroupcheck}
+            (8(f_3-f_1)+r_3-r_1)(8(f_3-f_2)+r_3-r_2)<0
+        \end{equation}
+        which is the condition for the middle ($f_3, r_3$) square to be between the starting ($f_1, r_1$) and arriving ($f_2, r_2$) squares.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/move_bishop_like.png}
+            \caption{\texttt{move\_bishop\_like}}
+        \end{figure}
+        \item \texttt{move\_rook} applies both to normal moves and captures, but only to rooks (as these have to disable castling when it is the first time they move, queens do not). It works similarly to the \texttt{move\_bishop\_like} rule, with the only difference that the common slide group must be a \rookgroupnode. Again, the possible middle blocker at square ($f_3, r_3$) must abide \ref{eq:slidegroupcheck}.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/move_rook.png}
+            \caption{\texttt{move\_rook}}
+        \end{figure}
+        \item \texttt{move\_queen} acts equivalently to \texttt{move\_rook}, with the only exception that it doesn't disable castling.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/move_queen.png}
+            \caption{\texttt{move\_queen}}
+        \end{figure}
+        \item \texttt{move\_king\_adj} applies both to normal moves and captures. To ensure that the piece can only move to an empty square or over a foe, a \texttt{no\_blocker} NAC is added. Of course, as it is the king itself that is moving, the \threatcheck\ checks on the arriving square, also, as the king is moving, the castling rights are updated.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/move_king_adj.png}
+            \caption{\texttt{move\_king\_adj}}
+        \end{figure}
+        \item \texttt{move\_king\_diag} acts the same as \texttt{move\_king\_adj}, the only difference is in the diagonal moves.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/move_king_diag.png}
+            \caption{\texttt{move\_king\_diag}}
+        \end{figure}
+        \item \texttt{move\_kingside/queenside\_castle} execute castling (if it is enabled in the current \gamestate, \texttt{c?Kcastle:kcastle} and \texttt{c?Qcastle:qcastle}). They also check that the squares between the king and the rook are empty (\texttt{no\_blocker*} NACs). As castling can only be done when the king is not in check (or moving across checked squares), these are the only moves that append \threatcheck\ to the stack before \push. Of course the resulting game state has the castling rights updated.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/move_kingside_castle.png}
+            \caption{\texttt{move\_kingside\_castle}}
+        \end{figure}
+    \end{enumerate}
+    \section{Push, pop, and threat check}
 \end{document}
 
