@@ -40,6 +40,9 @@
 \newcommand{\nextstate}{\edgerepr{next\_state}}
 \newcommand{\mover}{\edgerepr{mover}}
 \newcommand{\tosquare}{\edgerepr{to}}
+\newcommand{\threattgt}{\edgerepr{threat\_tgt}}
+\newcommand{\illegal}{\edgerepr{illegal}}
+\newcommand{\promotioninto}{\edgerepr{promotion\_into}}
 
 \title{Bark: An Attributed Graph Grammar Chess Engine}
 \author{Davide Marincione}
@@ -172,7 +175,7 @@
             \includegraphics[width=.8\linewidth]{images/move_pawn.png}
             \caption{\texttt{move\_pawn}}
         \end{figure}
-        \item \texttt{move\_pawn\_promotion\_white/black} apply like the \texttt{move\_pawn} rule, but only when the move leads to a promotion (i.e. the rank reached is either 7 or 0, based on moving color). These are among the only rules that don't append \pop, \threatcheck, and \push\ to the stack, but make a more complex update to it (as each possible promotion is a different move).
+        \item \texttt{move\_pawn\_promotion\_white/black} apply like the \texttt{move\_pawn} rule, but only when the move leads to a promotion (i.e. the rank reached is either 7 or 0, based on moving color). These are among the only rules that don't append \pop, \threatcheck, and \push\ to the stack, but make a more complex update to it (as each possible promotion is a different move). Furthermore, each \gamestate\ is connected to the promotion piece via a \promotioninto edge.
         \begin{figure}[H]
             \centering
             \includegraphics[width=.8\linewidth]{images/move_pawn_promotion_white.png}
@@ -190,7 +193,7 @@
             \includegraphics[width=.8\linewidth]{images/capture_pawn.png}
             \caption{\texttt{capture\_pawn}}
         \end{figure}
-        \item \texttt{capture\_pawn\_promotion\_white/black} apply like the \texttt{capture\_pawn} rule, but only when the move leads to a promotion (i.e. the rank reached is either 7 or 0, based on moving color). Again, these are among the only rules that make a more complex update to the stack (as each possible promotion is a different move). Unlike the normal \texttt{capture\_pawn} rule, there is no need to check for en passant, as it is impossible when a promotion is happening.
+        \item \texttt{capture\_pawn\_promotion\_white/black} apply like the \texttt{capture\_pawn} rule, but only when the move leads to a promotion (i.e. the rank reached is either 7 or 0, based on moving color). Again, these are among the only rules that make a more complex update to the stack (as each possible promotion is a different move). Unlike the normal \texttt{capture\_pawn} rule, there is no need to check for en passant, as it is impossible when a promotion is happening. Again, each \gamestate\ is connected to the promotion piece via a \promotioninto edge.
         \begin{figure}[H]
             \centering
             \includegraphics[width=.8\linewidth]{images/capture_pawn_promotion_white.png}
@@ -243,6 +246,25 @@
             \caption{\texttt{move\_kingside\_castle}}
         \end{figure}
     \end{enumerate}
-    \section{Push, pop, and threat check}
+    \section{Threat check, push, and pop}
+    As mentioned, to discern between a legal move and a non-legal one, but also to enable exploration, we devised three guards: \push, \pop, and \threatcheck.
+    Along with these guards, we have multiple rules accompanying them, which we describe.
+    \paragraph*{Threat check} All the \texttt{move\_*} and \texttt{capture\_*} rules append one or multiple \threatcheck s to the stack. A single instance of this guard is used to check if a square, connected via the \threattgt\ edge, is under threat by a given color, defined by the \texttt{attacker} attribute. This check is only used to discard moves that would leave the king in check or otherwise make the rule illegal, therefore we don't model it for cases such as en passant (for which the king can't be affected).
+    If any rule applies, the \gamestate\ is flagged via the \illegal\ edge; but we do not remove it from the graph immediately, as it is needed to book-keep which pseudo-legal moves have been checked.
+    To do this, we have the following rules:
+    \begin{enumerate}
+        \item \texttt{threat\_pawn} applies if \texttt{r2==r1+(c?1:-1)}.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/threat_pawn.png}
+            \caption{\texttt{threat\_pawn}}
+        \end{figure}
+        \item \texttt{threat\_knight} is one of the simplest rules, it doesn't have any NACs!
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/threat_knight.png}
+            \caption{\texttt{threat\_knight}}
+        \end{figure}
+    \end{enumerate}
 \end{document}
 
