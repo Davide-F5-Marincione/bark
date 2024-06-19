@@ -1,5 +1,3 @@
-
-
 def tables_to_ternary(mg_table, eg_table, mg_add, eg_add):
     for i in range(64):
         mg_table[i] = mg_table[i] + mg_add
@@ -12,6 +10,10 @@ def tables_to_ternary(mg_table, eg_table, mg_add, eg_add):
     print("(c?" + eg.replace("f", "file") + ":" + "0)")
     print("(c?0:" + mg.replace("f", "7-file") + ")")
     print("(c?0:" + eg.replace("f", "7-file") + ")")
+
+
+# tables from https://www.chessprogramming.org/PeSTO%27s_Evaluation_Function
+
 
 tables_to_ternary([-65,  23,  16, -15, -56, -34,   2,  13,
      29,  -1, -20,  -7,  -8,  -4, -38, -29,
