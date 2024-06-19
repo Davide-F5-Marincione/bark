@@ -32,7 +32,12 @@
 \newcommand{\void}{\noderepr{void\_guard}}
 \newcommand{\stackend}{\noderepr{stack\_end}}
 \newcommand{\produce}{\noderepr{produce}}
+\newcommand{\hproduce}{\noderepr{hproduce}}
 \newcommand{\evaluate}{\noderepr{evaluate}}
+\newcommand{\tellmewhy}{\noderepr{end\_game\_check}} % I don't know why latex doesn't let me use "endgame" as a command name
+\newcommand{\ai}{\noderepr{nega\_alpha\_beta}}
+\newcommand{\airesult}{\noderepr{ai\_result}}
+\newcommand{\select}{\noderepr{select}}
 
 \newcommand{\adj}{\edgerepr{adj}}
 \newcommand{\partof}{\edgerepr{part\_of}}
@@ -46,6 +51,8 @@
 \newcommand{\threattgt}{\edgerepr{threat\_tgt}}
 \newcommand{\illegal}{\edgerepr{illegal}}
 \newcommand{\promotioninto}{\edgerepr{promotion\_into}}
+\newcommand{\edgeselect}{\edgerepr{select}}
+\newcommand{\paststate}{\edgerepr{past\_state}}
 
 \title{Bark: An Attributed Graph Grammar Chess Engine}
 \author{Davide Marincione}
@@ -55,7 +62,7 @@
     \section{Introduction}
     Chess is a fairly complex game, with a relatively wide set of rules and a small but non-trivial branching factor (unlike Go, which has very simple rules but huge branching factor). This makes it a good candidate for projects such as Bark. Unlike traditional chess engines, Bark is not programmed in any language: it is instead a set of rules that can be applied to a graph, which is then used to play chess. This makes it a very complex and unwieldy project, as it requires a lot of work to define the rules and the graph structure. In this report, we will describe the rules and the graph structure used in Bark, how their mechanisms differ from a usual chess engine, and we will discuss the challenges and limitations of the project.
 
-    \paragraph{A small disclaimer} Since this report is dealing with attributed graph grammars, it is full of words like "node" and "edge"; to avoid repetition, we will use the formatting \noderepr{node} and \edgerepr{edge} to decrease the verbosity.
+    \paragraph{Two small disclaimers} Since this report is dealing with attributed graph grammars, it is full of words like "node" and "edge"; to avoid repetition, we will use the formatting \noderepr{node} and \edgerepr{edge} to decrease the verbosity. Furthermore, in the AGG software, to correctly run the project, layered graph transformation must be enabled, and the removal of "dangling" edges must be allowed.
 
     \section{Representing the board}
     Chess cannot be played without a chessboard, therefore the first step in creating Bark was to define a graph structure that could represent the board.
@@ -282,7 +289,7 @@
         \end{figure}
     \end{enumerate}
 
-    \paragraph*{Push} All the \texttt{push\_*} rules apply have the common behavior of adding, to the pushed \gamestate, a \fromsquare\ edge pointing to the square the moving piece is coming from. This is used to enable the \texttt{pop\_*} rules to revert the move. The rules are:
+    \paragraph*{Push} All the \texttt{push\_*} rules have the common behavior of adding, to the pushed \gamestate, a \fromsquare\ edge pointing to the square the moving piece is coming from. This is used to enable the \texttt{pop\_*} rules to revert the move. The rules are:
     \begin{enumerate}
         \item \texttt{push\_move} is the most generic of moves, and indeed it is the most "restricted" of the bunch, as it may apply to the result of any \texttt{move\_*} or \texttt{capture\_*} rule. To restrict it, we have \texttt{is\_capture}, \texttt{is\_promotion}, \texttt{is\_en\_passant} and \texttt{is\_castling} NACs. We have to devise a specific \texttt{is\_en\_passant} NAC as all other captures can easily be checked by whether there is an enemy piece on the arriving square, but en passant requires the presence of a foe pawn on the same file as the moving pawn.
         \begin{figure}[H]
@@ -362,10 +369,84 @@
         \end{figure}
     \end{enumerate}
 
-    \section{Evaluation of the board}
-    \paragraph*{How it is done} In traditional chess engines, the evaluation of the board is a complex task, as it requires to take into account a lot of factors, such as the position of the pieces, the pawn structure, the king safety, and more. This is a very complex task, as it requires a lot of heuristics and domain knowledge.
+    \section{End game checks}
+    Leaving aside a couple of rules (which we'll describe in the misc section), the modeling of the game is finalized with the end game checks. For simplicity, we don't check for the fifty-move rule, threefold repetition, or insufficient material, as these are quite complex to model and are not needed for the basic functioning of the game. We only check for checkmate and stalemate. To do so, we add the guard \tellmewhy\ and make it act with the following rules:
+
+    \begin{enumerate}
+        \item \texttt{select\_turn\_end\_game} checks that the current player cannot make any legal move anymore (\texttt{all\_illegal} GAC, which just checks that all produced moves are illegal), and that therefore the game must end, either in a draw or in a checkmate. To do that, we issue a threat check on the king.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/select_turn_end_game.png}
+            \caption{\texttt{select\_turn\_end\_game}}
+        \end{figure}
+        \item \texttt{end\_game\_draw} if the current game state doesn't have the king under check (the state doesn't have an \illegal), ends the game in a draw.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/end_game_draw.png}
+            \caption{\texttt{end\_game\_draw}}
+        \end{figure}
+        \item \texttt{end\_game\_checkmate} if the current game state has the king under check, ends the game in a checkmate.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/end_game_checkmate.png}
+            \caption{\texttt{end\_game\_checkmate}}
+        \end{figure}
+    \end{enumerate}
+
+    \section{The chess engine}
+    \paragraph*{How it is done} Chess engines are usually built upon the minimax search algorithm; there exists multiple variations of it, which further improve the search, with a myriad of tricks. The most important of these is the alpha-beta pruning of course, which enables the engine discard a lot of branches of the search tree, which are not useful. Furthermore, most engines have some forward-pruning techniques, which enable them to discard (or, at least, give less priority) certain branches.
+    \paragraph*{How Bark does it} We employ one of the most basic variations of minimax, the \href{https://www.chessprogramming.org/Alpha-Beta}{Nega-Alpha-Beta} algorithm, in its purest form (without any other elements). At the outset, we wanted to use the \href{https://www.chessprogramming.org/NegaScout}{NegaScout} algorithm, but in the end we found out that, if the order of the moves is not optimal (and we don't do move-ordering in Bark), it can be slower than the pure Nega-Alpha-Beta. The algorithm is implemented thanks to the \ai\ guard, which contains the depth at which the search is being done, and the alpha and beta values of the search. Furthermore, we add the \airesult\ guard to represent the result of a search call. These are used in the rules, which roughly represent the behavior of the algorithm:
+    \begin{enumerate}
+        \item \texttt{result\_store} stores, if a best game state has not been decided yet (for the current search), the result of the child search, and sets it as the best game state.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/result_store.png}
+            \caption{\texttt{result\_store}}
+        \end{figure}
+        \item \texttt{result\_store\_exists\_best} if a best game state has been decided, compares the result of the child search with the best game state (the alpha), and sets the best game state to the best of the two.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/result_store_exists_best.png}
+            \caption{\texttt{result\_store\_exists\_best}}
+        \end{figure}
+        \item \texttt{result\_bubble\_up} ends and returns the current search, if the child search has a better score than beta, and if a best game state has not been decided yet.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/result_bubble_up.png}
+            \caption{\texttt{result\_bubble\_up}}
+        \end{figure}
+        \item \texttt{result\_bubble\_up\_exists\_best} ends and returns the current search, if the child search has a better score than beta, and if a best game state has been decided.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/result_bubble_up_exists_best.png}
+            \caption{\texttt{result\_bubble\_up\_exists\_best}}
+        \end{figure}
+        \item \texttt{result\_discard} discards the result of the child search, as it doesn't have a better score than alpha.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/result_discard.png}
+            \caption{\texttt{result\_discard}}
+        \end{figure}
+    \end{enumerate}
+    Furthermore, as the game can either be run between human or machines (or a mix of the two), the \produce\ guard is actually made abstract, and it is inherited by \ai\ and \hproduce\, such that the former can recursively search the tree, and the latter only produce the first depth of the search (to enable selection by the human). And, finally, a \select\ guard is designed, to signal the point of computation in which a move is selected, and the \edgeselect\ edge is added, to represent the decision of either the human or the machine. To enable selection, we have the following two rules:
+    \begin{enumerate}
+        \item \texttt{select\_ai\_turn}, if the next player is the machine, executes the move, and, appends the \ai\ guard to the stack.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/select_ai_turn.png}
+            \caption{\texttt{select\_ai\_turn}}
+        \end{figure}
+        \item \texttt{select\_human\_turn}, similarly, if the next player is a human, executes the move, and, appends the \hproduce\ guard to the stack.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/select_human_turn.png}
+            \caption{\texttt{select\_human\_turn}}
+        \end{figure}
+    \end{enumerate}
+
+    \paragraph*{How evaluation is done} In traditional chess engines, the evaluation of the board is a complex task, as it requires taking into account a lot of factors, such as the position of the pieces, the pawn structure, the king safety, and more. This is a very complex task, as it requires a lot of heuristics and domain knowledge.
     
-    \paragraph{How Bark does it} To save computing time, and to make it as simple as possible, in Bark we take into account three factors:
+    \paragraph{How Bark evaluates} To save computing time, and to make it as simple as possible, in Bark we take into account three factors:
     \begin{itemize}
         \item The material difference between the two players.
         \item The position of the pieces on the board.
@@ -381,35 +462,77 @@
     The real difference between the rules is in how they change the attributes of the \evaluate. The original PeSTO evaluation works by using a set of tables, which are used to assign a value to each piece based on its position on the board and the game phase. In Bark, since we can't create arrays, we have rewritten these tables as a simple (and very unwieldy) set of nested ternary operators. As doing such a thing by hand would've been tedious and error-prone, we have written a formatter in Python that takes the values of the tables and outputs the nested ternary operators.
 
     The resulting evaluation enables us to avoid the need for more complex rules and further computation, which would have been needed to create the value of the board.
+
+    \section{Miscellaneous}
+    \paragraph*{Void guard} The \void\ guard is used to block the execution of the stack, until the execution of the layers loops and gets to the \texttt{remove\_void\_guard} rule.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.8\linewidth]{images/remove_void_guard.png}
+        \caption{\texttt{remove\_void\_guard}}
+    \end{figure}
+    \paragraph*{Cleaning} During the recursive search, a lot of \gamestate s are produced, and, when promotion rules are explored, new pieces are created! To avoid the graph becoming too large, we have designed:
+    \begin{enumerate}
+        \item \texttt{delete\_dangling\_states} which deletes all states that are not referenced by a guard, or by a game state referenced by a guard (\texttt{not\_dangling} and \texttt{is\_being\_processed} NACs), and do not have the \paststate\ edge (designed to keep a record of the game, and enable stuff like en-passant).
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/delete_dangling_states.png}
+            \caption{\texttt{delete\_dangling\_states}}
+        \end{figure}
+        \item \texttt{delete\_dangling\_pieces} which deletes all pieces that are not: currently placed, captured, moved at least once, or the result of a promotion (\texttt{is\_placed}, \texttt{was\_captured}, \texttt{moved\_once}, and \texttt{is\_promotion} NACs). Then, the only way that a piece can be removed is if it is the result of a promotion and that game state gets deleted (and therefore \promotioninto\ disappears).
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/delete_dangling_pieces.png}
+            \caption{\texttt{delete\_dangling\_pieces}}
+        \end{figure} 
+    \end{enumerate}
+    \paragraph*{Tying up the loose "ends"} The last rules that we describe are those which "end" the usage of a guard, and are used to clean up the stack.
+    These are placed in a layer greater than the rules of the game, as we exploit the layer functionality and layer looping to discern when the execution of the processes is done.
+    The only exception to this is the \texttt{end\_ai\_result} rule, which removes the current \airesult\ guard while on the same layer of the rest of the system, when the next guard in the stack is a \select\ guard (this is done because we don't need the value of the search anymore, as we've exited the search algorithm).
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.8\linewidth]{images/end_ai_result.png}
+        \caption{\texttt{end\_ai\_result}}
+    \end{figure} 
+    The rest of the "end" rules are:
+    \begin{enumerate}
+        \item \texttt{end\_produce} terminates the production of moves when a \hproduce\ guard is present.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/end_produce.png}
+            \caption{\texttt{end\_produce}}
+        \end{figure} 
+        \item \texttt{end\_produce\_result} terminates the search when an \ai\ guard is present (and returns the result of the search, the \texttt{alpha} attribute), the execution of this rule means that the current search has failed to produce a move with a score higher than the beta!
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/end_produce_result.png}
+            \caption{\texttt{end\_produce\_result}}
+        \end{figure} 
+        \item \texttt{end\_eval} terminates the evaluation of the board when an \evaluate\ guard is present; to do so it sets the result as the final formula for the PeSTO evaluation.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/end_eval.png}
+            \caption{\texttt{end\_eval}}
+        \end{figure} 
+        \item \texttt{end\_no\_threats} terminates the threat check, when no threats are found (if the "caller" of the threat check is not a \ai\ guard, for that, we have the next moves).
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/end_no_threats.png}
+            \caption{\texttt{end\_no\_threats}}
+        \end{figure}
+        \item \texttt{end\_no\_threats\_ai} terminates the threat check, when no threats are found, if the "caller" is the \ai\ guard and \ai's depth is greater than 1. Then further explores by creating a new \ai\ guard referencing the current game state.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/end_no_threats_ai.png}
+            \caption{\texttt{end\_no\_threats\_ai}}
+        \end{figure}
+        \item \texttt{end\_no\_threats\_eval} terminates the threat check, when no threats are found, if the "caller" is the \ai\ guard and \ai's depth is 1. Then evaluates the board.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.8\linewidth]{images/end_no_threats_eval.png}
+            \caption{\texttt{end\_no\_threats\_eval}}
+        \end{figure}
+    \end{enumerate}
+
+    \section{Conclusions and Limitations}
+    The definition of chess and a relative engine for it (which, in spite of the hoops we went through, is still the most simple engine one could define) in an Attributed Graph Grammar is not easy! Both because of how different thinking in terms of graph grammars is and because of how slow the testing the system went. Indeed, just to run the selection for a single move at a depth of 3 takes roughly a full hour on a desktop pc! Because of this, we weren't able to run even a single full game on this system\dots it was just too slow!\\From this, we can assume that either chess is not a good fit for attributed graph grammars, or that AGG, being not designed for heavy processing, is unfit to run such complicated grammars\dots or both (we strongly lean towards this conclusion). Still, this project is probably the first (and last) of its kind, and it may be useful to show the limits of what can be done with graph grammars in general.
 \end{document}
-
-% remove void guard
-% select human turn
-% select ai turn
-% select turn end game
-% end game draw
-% end game checkmate
-% ---
-% result bubble up
-% result bubble up exists best
-% result store
-% result store exists best
-% result discard
-% delete dangling states
-% delete dangling pieces
-% end ai result
-% end produce
-% end produce result
-% end eval
-% end no threats
-% end no threats ai
-% end no threats eval
-
-% 3 di threat check
-% 1 di eval
-% 2 di produce
-% 1 void guard
-% 2 di select
-% 3 di end game
-% 6 di ai
-% 2 di pulizia
